@@ -1,0 +1,108 @@
+:root {
+    --hd-bgColor: #181b4a;
+    --font-color: white;
+    --accent-color: #ffd900;
+    --font-size: clamp(.8rem, 2vw, 1.5rem);
+    --border-radius:0.25rem;
+}
+
+
+.header {
+    width: 100%;
+    height: 15vh;
+    padding: 0 2vw;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 300ms ease-in-out;
+    color: var(--font-color);
+    background-color: var(--hd-bgColor);
+}
+
+.header>a {
+    width: 10%;
+}
+
+.header>a>img {
+    width: 100%;
+}
+
+.header>ul {
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    gap: 2vw;
+    list-style: none;
+}
+
+.header>ul li a {
+    color: var(--font-color);
+    text-decoration: none;
+    transition: 150ms ease-in-out;
+    white-space: nowrap;
+}
+
+.header ul li a:hover {
+    color: var(--accent-color);
+    align-items: flex-start;
+}
+
+.header ul li a:hover .profile .profile__pic {
+    box-shadow: 0 0 0 2px var(--accent-color);
+}
+
+.header .profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    gap: .5rem;
+    z-index:1;
+
+}
+
+.header .profile>ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+    white-space: nowrap;
+    list-style-type: none;
+}
+
+.header .profile .profile__name {
+    font-size: clamp(.9rem, 3vw, 1.2rem);
+}
+
+.header .profile .profile__function {
+    font-size: clamp(.7rem, 1.5vw, 1rem);
+}
+
+.header .profile .profile__pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    box-shadow: 0 0 0 2px black;
+    border: 2px solid white;
+    white-space: nowrap;
+    transition: 100ms ease-in-out;
+}
+
+.dropdown{
+    padding: 1vw;
+    transform: translatex(-2%);
+    list-style-type: none;
+    position: absolute;
+    width: 100%;
+    font-size: 0;
+    transition: 100ms ease-in-out;
+    opacity: 0;
+    background-color: var(--hd-bgColor);
+}
+
+.dropdown.displayed{
+    font-size: clamp(0.8rem, 2vw, 1.3rem);
+    opacity: 1;
+}

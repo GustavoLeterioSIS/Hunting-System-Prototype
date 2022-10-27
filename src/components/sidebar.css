@@ -1,0 +1,75 @@
+:root {
+    --sb-bgColor: #181b4a;
+    --font-color: white;
+    --accent-color: #ffd900;
+    --font-size: clamp(.8rem, 2vw, 1.5rem);
+}
+
+
+.sidebar {
+    background-color: var(--sb-bgColor);
+    padding: 1.5vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-size:0;
+    gap:0;
+}
+
+.open{
+    font-size: var(--font-size);
+    gap: 1.5vw;
+}
+
+.sidebar button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar .items>li {
+    padding-bottom: 6%
+}
+
+.sidebar a {
+    color: var(--font-color);
+    text-decoration: none;
+    cursor: pointer;
+    transition: 100ms ease-in-out;
+}
+
+.sidebar a:hover,
+.sidebar a:hover .dropdown__icon path {
+    color: var(--accent-color);
+    stroke: var(--accent-color);
+}
+
+.sidebar .dropdown__menu {
+    margin-left: 10%;
+    display: none;
+}
+
+.sidebar .dropdown__menu.open {
+    display: block;
+}
+
+.sidebar .dropdown__icon {
+    transition: transform 200ms linear, stroke 100ms ease-in-out;
+    display: none;
+}
+
+.sidebar .dropdown__icon.displayed {
+    display: inline;
+}
+
+
+.sidebar .dropdown__icon path {
+    stroke: var(--font-color);
+}

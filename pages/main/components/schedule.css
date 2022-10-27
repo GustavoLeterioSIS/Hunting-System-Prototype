@@ -1,0 +1,111 @@
+:root {
+    --border-radius: 0.25rem;
+    --done-primary-color: #155100;
+    --done-secondary-color: #D0FFC9;
+    --inprogress-primary-color: #796600;
+    --inprogress-secondary-color: #FDFF86;
+    --undone-primary-color: #8F0000;
+    --undone-secondary-color: #FDD1D1;
+}
+
+.schedule__wrapper {
+    border-radius: var(--border-radius);
+    background: linear-gradient(135deg, #f9f9f9 30%, #fff 50%, #f9f9f9 70%);
+    border: 1px solid #cbcbcb;
+    width: 100%;
+    height: calc(100vh - 32vh - 3rem);
+    display: grid;
+    overflow-y: scroll;
+}
+
+.schedule__wrapper .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.schedule__wrapper .unstick {
+    position: fixed;
+    width: calc(100vw - 2rem - 7px);
+    white-space: nowrap;
+}
+
+.schedule__wrapper .head span {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: .75rem;
+    text-align: center;
+}
+
+.schedule__wrapper .head span:first-child {
+    border-radius: var(--border-radius) 0 0 0;
+}
+
+.schedule__wrapper .head span:last-child {
+    border-radius: 0 var(--border-radius) 0 0;
+}
+
+.schedule__wrapper .week {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.schedule__wrapper .week .day {
+    width: 100%;
+    height: 100%;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    background-color: white;
+}
+
+.schedule__wrapper .week:last-child .day:first-child {
+    border-radius: 0 0 0 var(--border-radius);
+}
+
+.schedule__wrapper .week:last-child .day:last-child {
+    border-radius: 0 0 var(--border-radius) 0;
+}
+
+.schedule__wrapper .week .day .day__number {
+    font-size: clamp(.7rem, 3vw, 1rem);
+    color: #888;
+    align-self: flex-end;
+}
+
+.schedule__wrapper .week .day .tasks {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    list-style-type: none;
+    padding: 0;
+}
+
+.schedule__wrapper .week .day .tasks li {
+    width: 100%;
+    padding: .125rem .25rem;
+    display: flex;
+    justify-content: space-between;
+    border-radius: var(--border-radius);
+}
+
+.schedule__wrapper .week .day .tasks .done {
+    background-color: var(--done-secondary-color);
+    color: var(--done-primary-color);
+    border: 1px solid var(--done-primary-color);
+}
+
+.schedule__wrapper .week .day .tasks .inprogress {
+    background-color: var(--inprogress-secondary-color);
+    color: var(--inprogress-primary-color);
+    border: 1px solid var(--inprogress-primary-color);
+}
+
+.schedule__wrapper .week .day .tasks .undone {
+    background-color: var(--undone-secondary-color);
+    color: var(--undone-primary-color);
+    border: 1px solid var(--undone-primary-color);
+}
