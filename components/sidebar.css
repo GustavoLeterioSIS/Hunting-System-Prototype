@@ -53,11 +53,13 @@
 
 .sidebar .dropdown__menu {
     margin-left: 10%;
-    display: none;
+    font-size:0px;
+    transition: 50ms ease-in-out;
+    white-space: nowrap;
 }
 
 .sidebar .dropdown__menu.open {
-    display: block;
+    font-size:var(--font-size);
 }
 
 .sidebar .dropdown__icon {
@@ -69,6 +71,9 @@
     display: inline;
 }
 
+.sidebar .dropdown__icon.displayed.open {
+    transform: rotateX(180deg);
+}
 
 .sidebar .dropdown__icon path {
     stroke: var(--font-color);

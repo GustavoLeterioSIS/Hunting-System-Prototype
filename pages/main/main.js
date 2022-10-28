@@ -2,12 +2,11 @@ const schedule = document.getElementById("schedule");
 const head = document.getElementById("head");
 
 schedule.addEventListener("scroll", () => {
-    console.log(schedule.scrollTop)
-  if (schedule.scrollTop > 0) {
+  if (schedule.scrollTop > 0)
     head.classList.add("unstick");
-}else{
+  else
     head.classList.remove("unstick");
-}
+
 });
 
 
@@ -21,4 +20,3 @@ infoButton.addEventListener("click", () => {
 infoCard.addEventListener("selectionchange", () => {
   infoCard.classList.remove("open");
 });
-
