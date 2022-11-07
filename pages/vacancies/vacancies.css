@@ -1,25 +1,9 @@
+@import url("/global.css");
+
+
 @import url("/pages/vacancies/components/enterprise-list.css");
 @import url("/pages/vacancies/components/vacancies-list.css");
 @import url("/pages/vacancies/components/chart-info.css");
-
-:root {
-    --font-family: 'Poppins', sans-serif;
-    --backgroud-color: white;
-    --border-color: #DDD;
-    --focus-color:#a80044;
-    --hover-color:#ffb600;
-    --done-primary-color: #155100;
-    --done-secondary-color: #D0FFC9;
-    --inprogress-primary-color: #796600;
-    --inprogress-secondary-color: #FDFF86;
-    --undone-primary-color: #8F0000;
-    --undone-secondary-color: #FDD1D1;
-}
-
-* {
-    box-sizing: border-box;
-    font-family: var(--font-family);
-}
 
 body {
     margin: 0;

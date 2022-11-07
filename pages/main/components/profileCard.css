@@ -3,8 +3,7 @@
     background: linear-gradient(135deg, #f9f9f9 30%, #fff 50%, #f9f9f9 70%);
     border: 1px solid #cbcbcb;
     padding: 3vh 1.5vw;
-    width: 49%;
-    height: 32vh;
+    width: 100%;
     display: flex;
     gap: 2rem;
     align-items: center;
@@ -31,7 +30,9 @@ h2 {
 
 .profile__card .content__wrapper {
     display: flex;
+    height: 80%;
     flex-direction: column;
+    justify-content: space-evenly;
     gap: .5rem;
 }
 
@@ -40,12 +41,12 @@ h2 {
 }
 
 .profile__card .content__wrapper h2 {
-    font-size: clamp(.7rem, 1.5vw, 1.5rem);
+    font-size: clamp(.8rem, 1.5vw, 1.5rem);
 }
 
 .profile__card .content__wrapper h2 span {
     color: var(--secondary-color);
-    font-size: clamp(.8rem, 2vw, 2rem);
+    font-size: clamp(.9rem, 2vw, 1.5rem);
     font-weight: 700;
 }
 
@@ -57,7 +58,7 @@ h2 {
 
 .profile__card .content__wrapper .points__wrapper span {
     color: var(--accent-color);
-    font-size: clamp(1.5rem, 4vw, 3rem);
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
     font-weight: 700;
 }
 
@@ -78,17 +79,17 @@ h2 {
     align-self: flex-start;
 }
 
-.profile__card .content__wrapper .points__wrapper .info__card{
+.profile__card .content__wrapper .points__wrapper .info__card {
     position: absolute;
     background-color: white;
     width: 25vw;
     padding: 1rem;
     border: 1px solid #ccc;
-    transform: translate(40%,0);
+    transform: translate(40%, 0);
     display: none;
 }
 
-.profile__card .content__wrapper .points__wrapper .info__card.open{
+.profile__card .content__wrapper .points__wrapper .info__card.open {
     display: inline;
 }
 

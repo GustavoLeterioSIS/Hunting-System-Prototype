@@ -8,73 +8,75 @@
 <body>
     <script src="main.js" defer></script>
     <main>
-        <section class="profile__card">
-            <div class="image__wrapper">
-                <img src="../../src/images/profile-pic.webp" alt="Minha Foto">
-            </div>
-            <div class="content__wrapper">
-                <div class="text__wrapper">
-                    <h1>Olá, Gustavo Letério</h1>
-                    <h2>Você concluiu <span>13</span> eventos nesta semana!</h2>
+        <section class="profile-events">
+            <article class="profile__card">
+                <div class="image__wrapper">
+                    <img src="../../src/images/profile-pic.webp" alt="Minha Foto">
                 </div>
-                <div class="points__wrapper">
-                    <svg style="transform: rotateX(180deg);" class="dropdown__icon" id="dropdownIcon" width="32"
-                        height="32" viewBox="0 0 32 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 3L15.5 18L28 3" stroke="black" stroke-width="5" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-                    <span>195</span>
-                    <button id="info">?</button>
-                    <div class="info__card" id="infoCard">
-                        <p class="text-center">A sua pontuação é composta das seguintes atividades:</p>
-                        <div >
-                            <ul>
-                                <li><b>Entrevistas</b> - 75 pontos</li>
-                                <li><b>Currículos Analisados</b> - 75 pontos</li>
-                                <li><b>Reuniões</b> - 45 pontos</li>
-                            </ul>
-                        </div>
+                <div class="content__wrapper">
+                    <div class="text__wrapper">
+                        <h1>Olá, Gustavo Letério</h1>
+                        <h2>Você concluiu <span>13</span> eventos nesta semana!</h2>
                     </div>
-                    <aside>Referente ao começo da semana (Segunda-Feira)</aside>
+                    <div class="points__wrapper">
+                        <svg style="transform: rotateX(180deg);" class="dropdown__icon" id="dropdownIcon" width="32"
+                            height="32" viewBox="0 0 32 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 3L15.5 18L28 3" stroke="black" stroke-width="5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span>195</span>
+                        <button id="info">?</button>
+                        <div class="info__card" id="infoCard">
+                            <p class="text-center">A sua pontuação é composta das seguintes atividades:</p>
+                            <div>
+                                <ul>
+                                    <li><b>Entrevistas</b> - 75 pontos</li>
+                                    <li><b>Currículos Analisados</b> - 75 pontos</li>
+                                    <li><b>Reuniões</b> - 45 pontos</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <aside>Referente ao começo da semana (Segunda-Feira)</aside>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section class="daily__events">
-            <h1>Minhas Atribuições - Hoje</h1>
-            <div class="radius">
-                <table class="events">
-                    <tr>
-                        <th>Nome</th>
-                        <th>Evento</th>
-                        <th>Data</th>
-                        <th>Empresa</th>
-                        <th>Status</th>
-                    </tr>
+            </article>
+            <article class="daily__events">
+                <h1>Minhas Atribuições - Hoje</h1>
+                <div class="radius">
+                    <table class="events">
+                        <tr>
+                            <th>Nome</th>
+                            <th>Evento</th>
+                            <th>Data</th>
+                            <th>Empresa</th>
+                            <th>Status</th>
+                        </tr>
 
-                    <tr>
-                        <td>Junior Costa</td>
-                        <td>Análise de Currículo</td>
-                        <td>26/10/2022</td>
-                        <td>Bradesco</td>
-                        <td class="done">Nova</td>
-                    </tr>
-                    <tr>
-                        <td>Junior Costa</td>
-                        <td>Análise de Currículo</td>
-                        <td>26/10/2022</td>
-                        <td>Riachuelo</td>
-                        <td class="done">Em Progresso</td>
-                    </tr>
+                        <tr>
+                            <td>Junior Costa</td>
+                            <td>Análise de Currículo</td>
+                            <td>26/10/2022</td>
+                            <td>Bradesco</td>
+                            <td class="done">Nova</td>
+                        </tr>
+                        <tr>
+                            <td>Junior Costa</td>
+                            <td>Análise de Currículo</td>
+                            <td>26/10/2022</td>
+                            <td>Riachuelo</td>
+                            <td class="done">Em Progresso</td>
+                        </tr>
 
-                    <tr>
-                        <td>Junior Costa</td>
-                        <td>Entrevista</td>
-                        <td>26/10/2022 16:15</td>
-                        <td>Riachuelo</td>
-                        <td class="done">Concluído</td>
-                    </tr>
-                </table>
-            </div>
+                        <tr>
+                            <td>Junior Costa</td>
+                            <td>Entrevista</td>
+                            <td>26/10/2022 16:15</td>
+                            <td>Riachuelo</td>
+                            <td class="done">Concluído</td>
+                        </tr>
+                    </table>
+                </div>
+            </article>
         </section>
         <section class="schedule__wrapper" id="schedule">
             <div class="head" id="head">
@@ -84,388 +86,390 @@
                 <span>Quinta-Feira</span>
                 <span>Sexta-Feira</span>
             </div>
-            <div class="week">
-                <div class="day">
-                    <span class="day__number">03</span>
-                    <ul class="tasks">
-                        <li class="done">
-                            <span class="task">Entrevista</span>
-                            <span class="time">09:00</span>
-                        </li>
-                        <li class="done">
-                            <span class="task">Reunião</span>
-                            <span class="time">10:00</span>
-                        </li>
-                        <li class="done">
-                            <span class="task">Análise de Currículos</span>
-                            <span class="time">13:00</span>
-                        </li>
-                    </ul>
+            <div class="body">
+                <div class="week">
+                    <div class="day">
+                        <span class="day__number">03</span>
+                        <ul class="tasks">
+                            <li class="done">
+                                <span class="task">Entrevista</span>
+                                <span class="time">09:00</span>
+                            </li>
+                            <li class="done">
+                                <span class="task">Reunião</span>
+                                <span class="time">10:00</span>
+                            </li>
+                            <li class="done">
+                                <span class="task">Análise de Currículos</span>
+                                <span class="time">13:00</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="day">
+                        <span class="day__number">04</span>
+                        <ul class="tasks">
+                            <li class="done">
+                                <span class="task">Entrevistas</span>
+                                <span class="time">09:00</span>
+                            </li>
+                            <li class="done">
+                                <span class="task">Análise de Currículos</span>
+                                <span class="time">13:00</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="day">
+                        <span class="day__number">05</span>
+                        <ul class="tasks">
+                            <li class="done">
+                                <span class="task">Reunião</span>
+                                <span class="time">10:00</span>
+                            </li>
+                            <li class="done">
+                                <span class="task">Análise de Currículos</span>
+                                <span class="time">13:00</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="day">
+                        <span class="day__number">06</span>
+                        <ul class="tasks">
+                            <li class="done">
+                                <span class="task">Entrevista</span>
+                                <span class="time">09:00</span>
+                            </li>
+                            <li class="inprogress">
+                                <span class="task">Reunião</span>
+                                <span class="time">10:00</span>
+                            </li>
+                            <li class="undone">
+                                <span class="task">Análise de Currículos</span>
+                                <span class="time">13:00</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="day">
+                        <span class="day__number">07</span>
+                        <ul class="tasks">
+                            <li class="undone">
+                                <span class="task">Entrevista</span>
+                                <span class="time">09:00</span>
+                            </li>
+                            <li class="undone">
+                                <span class="task">Reunião</span>
+                                <span class="time">10:00</span>
+                            </li>
+                            <li class="undone">
+                                <span class="task">Análise de Currículos</span>
+                                <span class="time">13:00</span>
+                            </li>
+                            <li class="undone">
+                                <span class="task">Análise de Currículos</span>
+                                <span class="time">13:00</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="day">
-                    <span class="day__number">04</span>
-                    <ul class="tasks">
-                        <li class="done">
-                            <span class="task">Entrevistas</span>
-                            <span class="time">09:00</span>
-                        </li>
-                        <li class="done">
-                            <span class="task">Análise de Currículos</span>
-                            <span class="time">13:00</span>
-                        </li>
-                    </ul>
+                <div class="week">
+                    <div class="day">
+                        <span class="day__number">10</span>
+                        <ul class="tasks">
+                            <li class="done">
+                                <span class="task">Entrevista</span>
+                                <span class="time">09:00</span>
+                            </li>
+                            <li class="inprogress">
+                                <span class="task">Reunião</span>
+                                <span class="time">10:00</span>
+                            </li>
+                            <li class="undone">
+                                <span class="task">Análise de Currículos</span>
+                                <span class="time">13:00</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="day">
+                        <span class="day__number">11</span>
+                        <ul class="tasks">
+                            <li class="done">
+                                <span class="task">Entrevista</span>
+                                <span class="time">09:00</span>
+                            </li>
+                            <li class="inprogress">
+                                <span class="task">Reunião</span>
+                                <span class="time">10:00</span>
+                            </li>
+                            <li class="undone">
+                                <span class="task">Análise de Currículos</span>
+                                <span class="time">13:00</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="day">
+                        <span class="day__number">12</span>
+                        <ul class="tasks">
+                            <li class="done">
+                                <span class="task">Entrevista</span>
+                                <span class="time">09:00</span>
+                            </li>
+                            <li class="inprogress">
+                                <span class="task">Reunião</span>
+                                <span class="time">10:00</span>
+                            </li>
+                            <li class="undone">
+                                <span class="task">Análise de Currículos</span>
+                                <span class="time">13:00</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="day">
+                        <span class="day__number">13</span>
+                        <ul class="tasks">
+                            <li class="done">
+                                <span class="task">Entrevista</span>
+                                <span class="time">09:00</span>
+                            </li>
+                            <li class="inprogress">
+                                <span class="task">Reunião</span>
+                                <span class="time">10:00</span>
+                            </li>
+                            <li class="undone">
+                                <span class="task">Análise de Currículos</span>
+                                <span class="time">13:00</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="day">
+                        <span class="day__number">14</span>
+                        <ul class="tasks">
+                            <li class="done">
+                                <span class="task">Entrevista</span>
+                                <span class="time">09:00</span>
+                            </li>
+                            <li class="inprogress">
+                                <span class="task">Reunião</span>
+                                <span class="time">10:00</span>
+                            </li>
+                            <li class="undone">
+                                <span class="task">Análise de Currículos</span>
+                                <span class="time">13:00</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="day">
-                    <span class="day__number">05</span>
-                    <ul class="tasks">
-                        <li class="done">
-                            <span class="task">Reunião</span>
-                            <span class="time">10:00</span>
-                        </li>
-                        <li class="done">
-                            <span class="task">Análise de Currículos</span>
-                            <span class="time">13:00</span>
-                        </li>
-                    </ul>
+                <div class="week">
+                    <div class="day">
+                        <span class="day__number">17</span>
+                        <ul class="tasks">
+                            <li class="done">
+                                <span class="task">Entrevista</span>
+                                <span class="time">09:00</span>
+                            </li>
+                            <li class="inprogress">
+                                <span class="task">Reunião</span>
+                                <span class="time">10:00</span>
+                            </li>
+                            <li class="undone">
+                                <span class="task">Análise de Currículos</span>
+                                <span class="time">13:00</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="day">
+                        <span class="day__number">18</span>
+                        <ul class="tasks">
+                            <li class="done">
+                                <span class="task">Entrevista</span>
+                                <span class="time">09:00</span>
+                            </li>
+                            <li class="inprogress">
+                                <span class="task">Reunião</span>
+                                <span class="time">10:00</span>
+                            </li>
+                            <li class="undone">
+                                <span class="task">Análise de Currículos</span>
+                                <span class="time">13:00</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="day">
+                        <span class="day__number">19</span>
+                        <ul class="tasks">
+                            <li class="done">
+                                <span class="task">Entrevista</span>
+                                <span class="time">09:00</span>
+                            </li>
+                            <li class="inprogress">
+                                <span class="task">Reunião</span>
+                                <span class="time">10:00</span>
+                            </li>
+                            <li class="undone">
+                                <span class="task">Análise de Currículos</span>
+                                <span class="time">13:00</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="day">
+                        <span class="day__number">20</span>
+                        <ul class="tasks">
+                            <li class="done">
+                                <span class="task">Entrevista</span>
+                                <span class="time">09:00</span>
+                            </li>
+                            <li class="inprogress">
+                                <span class="task">Reunião</span>
+                                <span class="time">10:00</span>
+                            </li>
+                            <li class="undone">
+                                <span class="task">Análise de Currículos</span>
+                                <span class="time">13:00</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="day">
+                        <span class="day__number">21</span>
+                        <ul class="tasks">
+                            <li class="done">
+                                <span class="task">Entrevista</span>
+                                <span class="time">09:00</span>
+                            </li>
+                            <li class="inprogress">
+                                <span class="task">Reunião</span>
+                                <span class="time">10:00</span>
+                            </li>
+                            <li class="undone">
+                                <span class="task">Análise de Currículos</span>
+                                <span class="time">13:00</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="day">
-                    <span class="day__number">06</span>
-                    <ul class="tasks">
-                        <li class="done">
-                            <span class="task">Entrevista</span>
-                            <span class="time">09:00</span>
-                        </li>
-                        <li class="inprogress">
-                            <span class="task">Reunião</span>
-                            <span class="time">10:00</span>
-                        </li>
-                        <li class="undone">
-                            <span class="task">Análise de Currículos</span>
-                            <span class="time">13:00</span>
-                        </li>
-                    </ul>
+                <div class="week">
+                    <div class="day">
+                        <span class="day__number">24</span>
+                        <ul class="tasks">
+                            <li class="done">
+                                <span class="task">Entrevista</span>
+                                <span class="time">09:00</span>
+                            </li>
+                            <li class="inprogress">
+                                <span class="task">Reunião</span>
+                                <span class="time">10:00</span>
+                            </li>
+                            <li class="undone">
+                                <span class="task">Análise de Currículos</span>
+                                <span class="time">13:00</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="day">
+                        <span class="day__number">25</span>
+                        <ul class="tasks">
+                            <li class="done">
+                                <span class="task">Entrevista</span>
+                                <span class="time">09:00</span>
+                            </li>
+                            <li class="inprogress">
+                                <span class="task">Reunião</span>
+                                <span class="time">10:00</span>
+                            </li>
+                            <li class="undone">
+                                <span class="task">Análise de Currículos</span>
+                                <span class="time">13:00</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="day">
+                        <span class="day__number">26</span>
+                        <ul class="tasks">
+                            <li class="done">
+                                <span class="task">Entrevista</span>
+                                <span class="time">09:00</span>
+                            </li>
+                            <li class="inprogress">
+                                <span class="task">Reunião</span>
+                                <span class="time">10:00</span>
+                            </li>
+                            <li class="undone">
+                                <span class="task">Análise de Currículos</span>
+                                <span class="time">13:00</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="day">
+                        <span class="day__number">27</span>
+                        <ul class="tasks">
+                            <li class="done">
+                                <span class="task">Entrevista</span>
+                                <span class="time">09:00</span>
+                            </li>
+                            <li class="inprogress">
+                                <span class="task">Reunião</span>
+                                <span class="time">10:00</span>
+                            </li>
+                            <li class="undone">
+                                <span class="task">Análise de Currículos</span>
+                                <span class="time">13:00</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="day">
+                        <span class="day__number">28</span>
+                        <ul class="tasks">
+                            <li class="done">
+                                <span class="task">Entrevista</span>
+                                <span class="time">09:00</span>
+                            </li>
+                            <li class="inprogress">
+                                <span class="task">Reunião</span>
+                                <span class="time">10:00</span>
+                            </li>
+                            <li class="undone">
+                                <span class="task">Análise de Currículos</span>
+                                <span class="time">13:00</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="day">
-                    <span class="day__number">07</span>
-                    <ul class="tasks">
-                        <li class="undone">
-                            <span class="task">Entrevista</span>
-                            <span class="time">09:00</span>
-                        </li>
-                        <li class="undone">
-                            <span class="task">Reunião</span>
-                            <span class="time">10:00</span>
-                        </li>
-                        <li class="undone">
-                            <span class="task">Análise de Currículos</span>
-                            <span class="time">13:00</span>
-                        </li>
-                        <li class="undone">
-                            <span class="task">Análise de Currículos</span>
-                            <span class="time">13:00</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="week">
-                <div class="day">
-                    <span class="day__number">10</span>
-                    <ul class="tasks">
-                        <li class="done">
-                            <span class="task">Entrevista</span>
-                            <span class="time">09:00</span>
-                        </li>
-                        <li class="inprogress">
-                            <span class="task">Reunião</span>
-                            <span class="time">10:00</span>
-                        </li>
-                        <li class="undone">
-                            <span class="task">Análise de Currículos</span>
-                            <span class="time">13:00</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="day">
-                    <span class="day__number">11</span>
-                    <ul class="tasks">
-                        <li class="done">
-                            <span class="task">Entrevista</span>
-                            <span class="time">09:00</span>
-                        </li>
-                        <li class="inprogress">
-                            <span class="task">Reunião</span>
-                            <span class="time">10:00</span>
-                        </li>
-                        <li class="undone">
-                            <span class="task">Análise de Currículos</span>
-                            <span class="time">13:00</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="day">
-                    <span class="day__number">12</span>
-                    <ul class="tasks">
-                        <li class="done">
-                            <span class="task">Entrevista</span>
-                            <span class="time">09:00</span>
-                        </li>
-                        <li class="inprogress">
-                            <span class="task">Reunião</span>
-                            <span class="time">10:00</span>
-                        </li>
-                        <li class="undone">
-                            <span class="task">Análise de Currículos</span>
-                            <span class="time">13:00</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="day">
-                    <span class="day__number">13</span>
-                    <ul class="tasks">
-                        <li class="done">
-                            <span class="task">Entrevista</span>
-                            <span class="time">09:00</span>
-                        </li>
-                        <li class="inprogress">
-                            <span class="task">Reunião</span>
-                            <span class="time">10:00</span>
-                        </li>
-                        <li class="undone">
-                            <span class="task">Análise de Currículos</span>
-                            <span class="time">13:00</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="day">
-                    <span class="day__number">14</span>
-                    <ul class="tasks">
-                        <li class="done">
-                            <span class="task">Entrevista</span>
-                            <span class="time">09:00</span>
-                        </li>
-                        <li class="inprogress">
-                            <span class="task">Reunião</span>
-                            <span class="time">10:00</span>
-                        </li>
-                        <li class="undone">
-                            <span class="task">Análise de Currículos</span>
-                            <span class="time">13:00</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="week">
-                <div class="day">
-                    <span class="day__number">17</span>
-                    <ul class="tasks">
-                        <li class="done">
-                            <span class="task">Entrevista</span>
-                            <span class="time">09:00</span>
-                        </li>
-                        <li class="inprogress">
-                            <span class="task">Reunião</span>
-                            <span class="time">10:00</span>
-                        </li>
-                        <li class="undone">
-                            <span class="task">Análise de Currículos</span>
-                            <span class="time">13:00</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="day">
-                    <span class="day__number">18</span>
-                    <ul class="tasks">
-                        <li class="done">
-                            <span class="task">Entrevista</span>
-                            <span class="time">09:00</span>
-                        </li>
-                        <li class="inprogress">
-                            <span class="task">Reunião</span>
-                            <span class="time">10:00</span>
-                        </li>
-                        <li class="undone">
-                            <span class="task">Análise de Currículos</span>
-                            <span class="time">13:00</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="day">
-                    <span class="day__number">19</span>
-                    <ul class="tasks">
-                        <li class="done">
-                            <span class="task">Entrevista</span>
-                            <span class="time">09:00</span>
-                        </li>
-                        <li class="inprogress">
-                            <span class="task">Reunião</span>
-                            <span class="time">10:00</span>
-                        </li>
-                        <li class="undone">
-                            <span class="task">Análise de Currículos</span>
-                            <span class="time">13:00</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="day">
-                    <span class="day__number">20</span>
-                    <ul class="tasks">
-                        <li class="done">
-                            <span class="task">Entrevista</span>
-                            <span class="time">09:00</span>
-                        </li>
-                        <li class="inprogress">
-                            <span class="task">Reunião</span>
-                            <span class="time">10:00</span>
-                        </li>
-                        <li class="undone">
-                            <span class="task">Análise de Currículos</span>
-                            <span class="time">13:00</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="day">
-                    <span class="day__number">21</span>
-                    <ul class="tasks">
-                        <li class="done">
-                            <span class="task">Entrevista</span>
-                            <span class="time">09:00</span>
-                        </li>
-                        <li class="inprogress">
-                            <span class="task">Reunião</span>
-                            <span class="time">10:00</span>
-                        </li>
-                        <li class="undone">
-                            <span class="task">Análise de Currículos</span>
-                            <span class="time">13:00</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="week">
-                <div class="day">
-                    <span class="day__number">24</span>
-                    <ul class="tasks">
-                        <li class="done">
-                            <span class="task">Entrevista</span>
-                            <span class="time">09:00</span>
-                        </li>
-                        <li class="inprogress">
-                            <span class="task">Reunião</span>
-                            <span class="time">10:00</span>
-                        </li>
-                        <li class="undone">
-                            <span class="task">Análise de Currículos</span>
-                            <span class="time">13:00</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="day">
-                    <span class="day__number">25</span>
-                    <ul class="tasks">
-                        <li class="done">
-                            <span class="task">Entrevista</span>
-                            <span class="time">09:00</span>
-                        </li>
-                        <li class="inprogress">
-                            <span class="task">Reunião</span>
-                            <span class="time">10:00</span>
-                        </li>
-                        <li class="undone">
-                            <span class="task">Análise de Currículos</span>
-                            <span class="time">13:00</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="day">
-                    <span class="day__number">26</span>
-                    <ul class="tasks">
-                        <li class="done">
-                            <span class="task">Entrevista</span>
-                            <span class="time">09:00</span>
-                        </li>
-                        <li class="inprogress">
-                            <span class="task">Reunião</span>
-                            <span class="time">10:00</span>
-                        </li>
-                        <li class="undone">
-                            <span class="task">Análise de Currículos</span>
-                            <span class="time">13:00</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="day">
-                    <span class="day__number">27</span>
-                    <ul class="tasks">
-                        <li class="done">
-                            <span class="task">Entrevista</span>
-                            <span class="time">09:00</span>
-                        </li>
-                        <li class="inprogress">
-                            <span class="task">Reunião</span>
-                            <span class="time">10:00</span>
-                        </li>
-                        <li class="undone">
-                            <span class="task">Análise de Currículos</span>
-                            <span class="time">13:00</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="day">
-                    <span class="day__number">28</span>
-                    <ul class="tasks">
-                        <li class="done">
-                            <span class="task">Entrevista</span>
-                            <span class="time">09:00</span>
-                        </li>
-                        <li class="inprogress">
-                            <span class="task">Reunião</span>
-                            <span class="time">10:00</span>
-                        </li>
-                        <li class="undone">
-                            <span class="task">Análise de Currículos</span>
-                            <span class="time">13:00</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="week">
-                <div class="day">
-                    <span class="day__number">29</span>
-                    <ul class="tasks">
-                        <li class="done">
-                            <span class="task">Entrevista</span>
-                            <span class="time">09:00</span>
-                        </li>
-                        <li class="inprogress">
-                            <span class="task">Reunião</span>
-                            <span class="time">10:00</span>
-                        </li>
-                        <li class="undone">
-                            <span class="task">Análise de Currículos</span>
-                            <span class="time">13:00</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="day">
-                    <span class="day__number">30</span>
-                    <ul class="tasks">
-                        <li class="done">
-                            <span class="task">Entrevista</span>
-                            <span class="time">09:00</span>
-                        </li>
-                        <li class="inprogress">
-                            <span class="task">Reunião</span>
-                            <span class="time">10:00</span>
-                        </li>
-                        <li class="undone">
-                            <span class="task">Análise de Currículos</span>
-                            <span class="time">13:00</span>
-                        </li>
-                    </ul>
-                </div>
-                <!-- <div class="day"></div>
+                <div class="week">
+                    <div class="day">
+                        <span class="day__number">29</span>
+                        <ul class="tasks">
+                            <li class="done">
+                                <span class="task">Entrevista</span>
+                                <span class="time">09:00</span>
+                            </li>
+                            <li class="inprogress">
+                                <span class="task">Reunião</span>
+                                <span class="time">10:00</span>
+                            </li>
+                            <li class="undone">
+                                <span class="task">Análise de Currículos</span>
+                                <span class="time">13:00</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="day">
+                        <span class="day__number">30</span>
+                        <ul class="tasks">
+                            <li class="done">
+                                <span class="task">Entrevista</span>
+                                <span class="time">09:00</span>
+                            </li>
+                            <li class="inprogress">
+                                <span class="task">Reunião</span>
+                                <span class="time">10:00</span>
+                            </li>
+                            <li class="undone">
+                                <span class="task">Análise de Currículos</span>
+                                <span class="time">13:00</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- <div class="day"></div>
                 <div class="day"></div>
                 <div class="day"></div> -->
+                </div>
             </div>
         </section>
     </main>

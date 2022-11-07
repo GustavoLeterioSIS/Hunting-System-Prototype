@@ -1,0 +1,29 @@
+@import url("/global.css");
+
+@import url("/components/header.css");
+@import url("/components/sidebar.css");
+@import url("/components/hambuguer-button.css");
+
+
+body{
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+    height:85vh;
+}
+
+iframe {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+

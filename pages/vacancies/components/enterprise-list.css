@@ -1,44 +1,38 @@
-
-
-::-webkit-scrollbar {
-    width: 5px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    background: #f6f6f6;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #999;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #666;
-}
-
 .enterprise-list {
     width: 33%;
     padding-right: .5vw;
     display: flex;
-    gap: 1%;
     flex-flow: column nowrap;
-    overflow-y: scroll;
 }
 
-.enterprise-list .enterprise {
+.enterprise-list .list-header {
+    background-color: var(--backgroud-color);
+    border: 1px solid var(--border-color);
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    border-radius: 10px 10px 0 0;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.enterprise-list .enterprises {
+    overflow-y: scroll;
+    flex-flow: column nowrap;
+    display: flex;
+    gap: 1%;
+}
+
+.enterprise-list .enterprises .enterprise {
     background-color: var(--backgroud-color);
     border: 1px solid var(--border-color);
     border-radius: 5px;
     display: flex;
     align-items: center;
     padding: 1% 5%;
-    gap: 5%;
+    gap: .5rem;
     cursor: pointer;
     transition: 200ms ease-in-out;
 }
+
 
 .enterprise-list .enterprise:hover {
     border: 1px solid var(--focus-color);
