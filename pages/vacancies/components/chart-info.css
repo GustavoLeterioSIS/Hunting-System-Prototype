@@ -1,0 +1,36 @@
+
+
+.chart__info {
+    height: 10%;
+    background-color: #ffffff;
+    padding: 1vh 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0 5px 10px -5px #BBB;
+    border-radius: 5px;
+}
+
+.chart__info .info {
+    font-size: clamp(1rem, 2vw, 1.75rem);
+    padding: 0 1rem;
+    border-radius: 3px;
+}
+
+.green {
+    background-color: #D0FFC9;
+    color: #155100;
+    border: 2px solid #155100;
+}
+
+.yellow {
+    background-color: #FDFF86;
+    color: #796600;
+    border: 2px solid #796600;
+}
+
+.red {
+    background-color: #FDD1D1;
+    color: #8F0000;
+    border: 2px solid #8F0000;
+}

@@ -1,12 +1,4 @@
-:root {
-    --border-radius: 0.25rem;
-    --done-primary-color: #155100;
-    --done-secondary-color: #D0FFC9;
-    --inprogress-primary-color: #796600;
-    --inprogress-secondary-color: #FDFF86;
-    --undone-primary-color: #8F0000;
-    --undone-secondary-color: #FDD1D1;
-}
+
 
 .schedule__wrapper {
     border-radius: var(--border-radius);

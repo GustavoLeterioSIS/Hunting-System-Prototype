@@ -1,12 +1,17 @@
 //Sidebar Handling
 var sidebar = document.getElementById("sidebar");
 var sidebarButton = sidebar.children[0];
+const iframe = document.getElementById("iframe");
 
-sidebarButton.addEventListener("click", () => {
-  resetClasses();
-  sbButtonHandle();
-  sideIcon.classList.toggle("displayed");
-  sidebar.classList.toggle("open");
+window.addEventListener('click', function (e) {
+  if (sidebarButton.contains(e.target)) {
+    sbButtonHandle();
+    sideIcon.classList.toggle("displayed");
+    sidebar.classList.toggle("open");
+    resetSidebarDropdown();
+  }else{
+  }
+
 });
 
 const sbButtonHandle = () => {
@@ -14,7 +19,7 @@ const sbButtonHandle = () => {
   sidebarButton.setAttribute('aria-expanded', sidebarButton.classList.contains('opened'));
 }
 
-const resetClasses = () => {
+const resetSidebarDropdown = () => {
   sbDropdownContent.classList.remove("open");
   sideIcon.classList.remove("open");
 }
@@ -35,19 +40,30 @@ var headerTrigger = document.getElementById("hdDropdownTrigger");
 const hdDropdownContent = document.getElementById("hdDropdownContent");
 
 headerTrigger.addEventListener("click", () => {
-    setTimeout(() => {
-      hdDropdownContent.classList.add("displayed");
-    }, 10);
+  setTimeout(() => {
+    hdDropdownContent.classList.add("displayed");
+  }, 10);
 });
 
 //Dropdown Closing System
 
-const iframe = document.getElementById("iframe").contentWindow.document.body;
+//For each reload of the iframe I needed to create a new event
+iframe.addEventListener("load", () => {
+  iframe.contentWindow.document.body.addEventListener("click", () => {
+    hdDropdownContent.classList.remove("displayed");
+    if (sidebar.classList[1] == "open") {
+      resetSidebarDropdown();
+      sideIcon.classList.remove("displayed");
+      sbButtonHandle();
+      sidebar.classList.remove("open");
+    }
+  });
+});
 
 //DD sidebar closing
 header.addEventListener("click", () => {
   if (sidebar.classList[1] == "open") {
-    resetClasses();
+    resetSidebarDropdown();
     sideIcon.classList.remove("displayed");
     sbButtonHandle();
     sidebar.classList.remove("open");
@@ -57,15 +73,4 @@ header.addEventListener("click", () => {
 //DD Header closing
 sidebar.addEventListener("click", () => {
   hdDropdownContent.classList.remove("displayed");
-});
-
-//Iframe both close event
-iframe.addEventListener("click", () => {
-  hdDropdownContent.classList.remove("displayed");
-  if (sidebar.classList[1] == "open") {
-    resetClasses();
-    sideIcon.classList.remove("displayed");
-    sbButtonHandle();
-    sidebar.classList.remove("open");
-  }
 });

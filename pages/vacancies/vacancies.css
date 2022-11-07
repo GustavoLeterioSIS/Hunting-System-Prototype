@@ -1,13 +1,13 @@
-@import url("/pages/main/components/profileCard.css");
-@import url("/pages/main/components/events.css");
-@import url("/pages/main/components/schedule.css");
+@import url("/pages/vacancies/components/enterprise-list.css");
+@import url("/pages/vacancies/components/vacancies-list.css");
+@import url("/pages/vacancies/components/chart-info.css");
 
 :root {
     --font-family: 'Poppins', sans-serif;
-    --border-radius: 0.25rem;
-    --border-radius: 0.25rem;
-    --accent-color: #00cc6b;
-    --secondary-color: #a80044;
+    --backgroud-color: white;
+    --border-color: #DDD;
+    --focus-color:#a80044;
+    --hover-color:#ffb600;
     --done-primary-color: #155100;
     --done-secondary-color: #D0FFC9;
     --inprogress-primary-color: #796600;
@@ -32,6 +32,12 @@ main {
     width: 100%;
     height: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 2%;
+}
+
+.tables {
+    display: flex;
+    height: 90%;
     gap: 2%;
 }
