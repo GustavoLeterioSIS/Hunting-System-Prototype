@@ -5,20 +5,80 @@
     flex-flow: column nowrap;
 }
 
-.enterprise-list .list-header {
+.enterprise-list .enterprise-header {
+    display: flex;
+    align-items: center;
+    gap: 5%;
     background-color: var(--backgroud-color);
     border: 1px solid var(--border-color);
     font-size: clamp(1rem, 2vw, 1.5rem);
     border-radius: 10px 10px 0 0;
-    padding: 1rem 0;
+    padding: 1rem;
     text-align: center;
+}
+
+.enterprise-list .enterprise-header form {
+    width: 100%;
+}
+
+.enterprise-list .enterprise-header form .search-input {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.enterprise-list .enterprise-header .search-input>input {
+    font-size: clamp(.7rem, 1.5vw, 1.2rem);
+    padding: .25rem;
+    padding-top: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--light-gray);
+    transition: 200ms ease-in-out;
+    width: 100%;
+}
+
+.enterprise-list .enterprise-header .search-input>input:hover {
+    box-shadow: 0 3px 5px -2px var(--hover-color);
+}
+
+.enterprise-list .enterprise-header .search-input>input:focus {
+    box-shadow: 0 3px 5px -2px var(--hover-color);
+}
+
+.enterprise-list .enterprise-header button {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: clamp(.7rem, 1.5vw, 1.2rem);
+    width: 10%;
+}
+
+.enterprise-list .enterprise-header button svg {
+    width: clamp(.8rem, 1.5vw, 1.3rem);
+}
+
+.enterprise-list .enterprise-header button svg path {
+    transition: 200ms ease-in-out;
+}
+
+.enterprise-list .enterprise-header button:hover svg path {
+    fill: var(--hover-color);
+}
+
+.enterprise-list .enterprise-header .results {
+    font-size: clamp(.7rem, 2vw, 1rem);
+    color: var(--light-gray);
+    white-space: nowrap;
 }
 
 .enterprise-list .enterprises {
     overflow-y: scroll;
     flex-flow: column nowrap;
     display: flex;
-    gap: 1%;
+    gap: .5%;
 }
 
 .enterprise-list .enterprises .enterprise {

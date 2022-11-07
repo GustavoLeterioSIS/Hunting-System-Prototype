@@ -1,6 +1,7 @@
+
 //Sidebar - sb
-var sidebar = document.getElementById("sidebar");
-var sbButton = sidebar.children[0];
+const sidebar = document.getElementById("sidebar");
+const sbButton = sidebar.children[0];
 
 //SB Inner Dropdown
 const sbDropdownTrigger = document.getElementById("sbDropdownTrigger");
@@ -8,11 +9,12 @@ const sbDropdownIcon = document.getElementById("dropdownIcon");
 const sbDropdownContent = document.getElementById("sbDropdownContent");
 
 //Header - hd
-var header = document.getElementById("header");
-var hdTrigger = document.getElementById("hdDropdownTrigger");
+const header = document.getElementById("header");
+const hdTrigger = document.getElementById("hdDropdownTrigger");
 const hdDropdownContent = document.getElementById("hdDropdownContent");
 
 const iframe = document.getElementById("iframe");
+
 
 //Global Event
 window.addEventListener('click', function (e) {

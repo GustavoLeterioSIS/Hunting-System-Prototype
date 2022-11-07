@@ -22,6 +22,24 @@ main {
 
 .tables {
     display: flex;
-    height: 90%;
-    gap: 2%;
+    height: 100%;
+    gap: 2vh;
+}
+
+.green {
+    background-color: #D0FFC9;
+    color: #155100;
+    border: 2px solid #155100;
+}
+
+.yellow {
+    background-color: #FDFF86;
+    color: #796600;
+    border: 2px solid #796600;
+}
+
+.red {
+    background-color: #FDD1D1;
+    color: #8F0000;
+    border: 2px solid #8F0000;
 }

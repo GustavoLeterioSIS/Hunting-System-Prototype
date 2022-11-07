@@ -11,8 +11,21 @@
 
         <section class="tables">
             <article class="enterprise-list">
-                <div class="list-header">
-                    Empresas Parceiras
+                <div class="enterprise-header">
+                    <form>
+                        <label for="searchEnterprise" class="search-input">
+                            <input type="search" name="searchEnterprise" id="searchEnterprise"
+                                placeholder="Pesquisar Empresa">
+                            <button>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path
+                                        d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"
+                                        fill="#000000" />
+                                </svg>
+                            </button>
+                        </label>
+                    </form>
+                    <span class="results">17 Resultados</span>
                 </div>
                 <div class="enterprises">
                     <button href="#" class="enterprise">
@@ -216,118 +229,1047 @@
                 </div>
             </article>
             <article class="vacancies-list">
-                <div class="vacancy">
-                    <div class="main__info">
-                        <div class="primary__info">
-                            <div class="info__line red"></div>
-                            <div class="vacancy__info">
-                                <p class="vacancy__name">Desenvolvedor Java</p>
-                                <p class="vacancy__enterprise">Lojas Riachuelo</p>
-                            </div>
+                <div class="vacancies-header">
+                    <form>
+                        <label for="searchVacancies" class="search-input">
+                            <input type="search" name="searchVacancies" id="searchVacancies"
+                                placeholder="Pesquisar Vagas">
+                            <button>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path
+                                        d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"
+                                        fill="#000000" />
+                                </svg>
+                            </button>
+                        </label>
+                        <div class="checkboxes">
+                            <label class="checkbox-label green" for="undone">
+                                <input type="checkbox" name="undone" id="undone">
+                                Em Aberto
+                            </label>
+                            <label class="checkbox-label yellow" for="inprogress">
+                                <input type="checkbox" name="inprogress" id="inprogress">
+                                Em Progresso
+                            </label>
+
+                            <label class="checkbox-label red" for="done">
+                                <input type="checkbox" name="done" id="done">
+                                Finalizadas
+                            </label>
                         </div>
-                        <p class="vacancy__status red">Período de Entrevistas</p>
-                        <svg class="dropdown__icon" id="dropdownIcon" width="16" height="16" viewBox="0 0 32 21"
-                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 3L15.5 18L28 3" stroke="black" stroke-width="5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
-                    </div>
-                    <div class="extended__info hidden">
-                        <ul class="links">
-                            <li class="link"><a href=""><span>↗ Lista de Candidatos</span></a></li>
-                            <li class="link"><a href=""><span>↗ Histórico de Atualizações</span></a></li>
-                        </ul>
-                        <ul class="dates">
-                            <li>
-                                <div class="date-wrapper">
-                                    <span class="title">Data de Início</span>
-                                    <span class="date">09/09/2022</span>
-                                </div>
-                                <div class="description">
-                                    <span>Iniciado por Gustavo Letério</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="date-wrapper">
-                                    <span class="title">Última Atualização</span>
-                                    <span class="date">09/09/2022</span>
-                                </div>
-                                <div class="description">
-                                    <span>Fechamento da Vaga</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="date-wrapper">
-                                    <span class="title">Data de Término</span>
-                                    <span class="date">09/09/2022</span>
-                                </div>
-                                <div class="description">
-                                    <span>"Inicío Incorreto" - Gustavo Letério</span>
-                                </div>
-                            </li>
-                        </ul>
-                        </table>
-                    </div>
+                    </form>
+                    <span class="results">17 Resultados</span>
                 </div>
-                <div class="vacancy">
-                    <div class="main__info">
-                        <div class="primary__info">
-                            <div class="info__line red"></div>
-                            <div class="vacancy__info">
-                                <p class="vacancy__name">Desenvolvedor Java</p>
-                                <p class="vacancy__enterprise">Lojas Riachuelo</p>
+                <div class="vacancies">
+                    <div class="vacancy">
+                        <div class="main__info">
+                            <div class="primary__info">
+                                <div class="info__line red"></div>
+                                <div class="vacancy__info">
+                                    <p class="vacancy__name">Desenvolvedor Java</p>
+                                    <p class="vacancy__enterprise">Lojas Riachuelo</p>
+                                </div>
                             </div>
+                            <p class="vacancy__status red">Período de Entrevistas</p>
+                            <svg class="dropdown__icon" id="dropdownIcon" width="16" height="16" viewBox="0 0 32 21"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 3L15.5 18L28 3" stroke="black" stroke-width="5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
                         </div>
-                        <p class="vacancy__status red">Período de Entrevistas</p>
-                        <svg class="dropdown__icon" id="dropdownIcon" width="16" height="16" viewBox="0 0 32 21"
-                            fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M3 3L15.5 18L28 3" stroke="black" stroke-width="5" stroke-linecap="round"
-                                stroke-linejoin="round" />
-                        </svg>
+                        <div class="extended__info hidden">
+                            <div class="links">
+                                <a href="" class="link">↗ Lista de Candidatos</a>
+                                <a href="" class="link">↗ Histórico de Atualizações</a>
+                            </div>
+                            <ul class="dates">
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Início</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Iniciado por Gustavo Letério</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Última Atualização</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Fechamento da Vaga</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Término</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>"Inicío Incorreto" - Gustavo Letério</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            </table>
+                        </div>
                     </div>
-                    <div class="extended__info hidden">
-                        <ul class="links">
-                            <li class="link"><a href=""><span>↗ Lista de Candidatos</span></a></li>
-                            <li class="link"><a href=""><span>↗ Histórico de Atualizações</span></a></li>
-                        </ul>
-                        <ul class="dates">
-                            <li>
-                                <div class="date-wrapper">
-                                    <span class="title">Data de Início</span>
-                                    <span class="date">09/09/2022</span>
+                    <div class="vacancy">
+                        <div class="main__info">
+                            <div class="primary__info">
+                                <div class="info__line red"></div>
+                                <div class="vacancy__info">
+                                    <p class="vacancy__name">Desenvolvedor Java</p>
+                                    <p class="vacancy__enterprise">Lojas Riachuelo</p>
                                 </div>
-                                <div class="description">
-                                    <span>Iniciado por Gustavo Letério</span>
+                            </div>
+                            <p class="vacancy__status red">Período de Entrevistas</p>
+                            <svg class="dropdown__icon" id="dropdownIcon" width="16" height="16" viewBox="0 0 32 21"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 3L15.5 18L28 3" stroke="black" stroke-width="5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="extended__info hidden">
+                            <div class="links">
+                                <a href="" class="link">↗ Lista de Candidatos</a>
+                                <a href="" class="link">↗ Histórico de Atualizações</a>
+                            </div>
+                            <ul class="dates">
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Início</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Iniciado por Gustavo Letério</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Última Atualização</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Fechamento da Vaga</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Término</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>"Inicío Incorreto" - Gustavo Letério</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="vacancy">
+                        <div class="main__info">
+                            <div class="primary__info">
+                                <div class="info__line red"></div>
+                                <div class="vacancy__info">
+                                    <p class="vacancy__name">Desenvolvedor Java</p>
+                                    <p class="vacancy__enterprise">Lojas Riachuelo</p>
                                 </div>
-                            </li>
-                            <li>
-                                <div class="date-wrapper">
-                                    <span class="title">Última Atualização</span>
-                                    <span class="date">09/09/2022</span>
+                            </div>
+                            <p class="vacancy__status red">Período de Entrevistas</p>
+                            <svg class="dropdown__icon" id="dropdownIcon" width="16" height="16" viewBox="0 0 32 21"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 3L15.5 18L28 3" stroke="black" stroke-width="5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="extended__info hidden">
+                            <div class="links">
+                                <a href="" class="link">↗ Lista de Candidatos</a>
+                                <a href="" class="link">↗ Histórico de Atualizações</a>
+                            </div>
+                            <ul class="dates">
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Início</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Iniciado por Gustavo Letério</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Última Atualização</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Fechamento da Vaga</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Término</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>"Inicío Incorreto" - Gustavo Letério</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="vacancy">
+                        <div class="main__info">
+                            <div class="primary__info">
+                                <div class="info__line red"></div>
+                                <div class="vacancy__info">
+                                    <p class="vacancy__name">Desenvolvedor Java</p>
+                                    <p class="vacancy__enterprise">Lojas Riachuelo</p>
                                 </div>
-                                <div class="description">
-                                    <span>Fechamento da Vaga</span>
+                            </div>
+                            <p class="vacancy__status red">Período de Entrevistas</p>
+                            <svg class="dropdown__icon" id="dropdownIcon" width="16" height="16" viewBox="0 0 32 21"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 3L15.5 18L28 3" stroke="black" stroke-width="5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="extended__info hidden">
+                            <div class="links">
+                                <a href="" class="link">↗ Lista de Candidatos</a>
+                                <a href="" class="link">↗ Histórico de Atualizações</a>
+                            </div>
+                            <ul class="dates">
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Início</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Iniciado por Gustavo Letério</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Última Atualização</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Fechamento da Vaga</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Término</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>"Inicío Incorreto" - Gustavo Letério</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="vacancy">
+                        <div class="main__info">
+                            <div class="primary__info">
+                                <div class="info__line red"></div>
+                                <div class="vacancy__info">
+                                    <p class="vacancy__name">Desenvolvedor Java</p>
+                                    <p class="vacancy__enterprise">Lojas Riachuelo</p>
                                 </div>
-                            </li>
-                            <li>
-                                <div class="date-wrapper">
-                                    <span class="title">Data de Término</span>
-                                    <span class="date">09/09/2022</span>
+                            </div>
+                            <p class="vacancy__status red">Período de Entrevistas</p>
+                            <svg class="dropdown__icon" id="dropdownIcon" width="16" height="16" viewBox="0 0 32 21"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 3L15.5 18L28 3" stroke="black" stroke-width="5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="extended__info hidden">
+                            <div class="links">
+                                <a href="" class="link">↗ Lista de Candidatos</a>
+                                <a href="" class="link">↗ Histórico de Atualizações</a>
+                            </div>
+                            <ul class="dates">
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Início</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Iniciado por Gustavo Letério</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Última Atualização</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Fechamento da Vaga</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Término</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>"Inicío Incorreto" - Gustavo Letério</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="vacancy">
+                        <div class="main__info">
+                            <div class="primary__info">
+                                <div class="info__line red"></div>
+                                <div class="vacancy__info">
+                                    <p class="vacancy__name">Desenvolvedor Java</p>
+                                    <p class="vacancy__enterprise">Lojas Riachuelo</p>
                                 </div>
-                                <div class="description">
-                                    <span>"Inicío Incorreto" - Gustavo Letério</span>
+                            </div>
+                            <p class="vacancy__status red">Período de Entrevistas</p>
+                            <svg class="dropdown__icon" id="dropdownIcon" width="16" height="16" viewBox="0 0 32 21"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 3L15.5 18L28 3" stroke="black" stroke-width="5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="extended__info hidden">
+                            <div class="links">
+                                <a href="" class="link">↗ Lista de Candidatos</a>
+                                <a href="" class="link">↗ Histórico de Atualizações</a>
+                            </div>
+                            <ul class="dates">
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Início</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Iniciado por Gustavo Letério</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Última Atualização</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Fechamento da Vaga</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Término</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>"Inicío Incorreto" - Gustavo Letério</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="vacancy">
+                        <div class="main__info">
+                            <div class="primary__info">
+                                <div class="info__line red"></div>
+                                <div class="vacancy__info">
+                                    <p class="vacancy__name">Desenvolvedor Java</p>
+                                    <p class="vacancy__enterprise">Lojas Riachuelo</p>
                                 </div>
-                            </li>
-                        </ul>
-                        </table>
+                            </div>
+                            <p class="vacancy__status red">Período de Entrevistas</p>
+                            <svg class="dropdown__icon" id="dropdownIcon" width="16" height="16" viewBox="0 0 32 21"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 3L15.5 18L28 3" stroke="black" stroke-width="5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="extended__info hidden">
+                            <div class="links">
+                                <a href="" class="link">↗ Lista de Candidatos</a>
+                                <a href="" class="link">↗ Histórico de Atualizações</a>
+                            </div>
+                            <ul class="dates">
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Início</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Iniciado por Gustavo Letério</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Última Atualização</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Fechamento da Vaga</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Término</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>"Inicío Incorreto" - Gustavo Letério</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="vacancy">
+                        <div class="main__info">
+                            <div class="primary__info">
+                                <div class="info__line red"></div>
+                                <div class="vacancy__info">
+                                    <p class="vacancy__name">Desenvolvedor Java</p>
+                                    <p class="vacancy__enterprise">Lojas Riachuelo</p>
+                                </div>
+                            </div>
+                            <p class="vacancy__status red">Período de Entrevistas</p>
+                            <svg class="dropdown__icon" id="dropdownIcon" width="16" height="16" viewBox="0 0 32 21"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 3L15.5 18L28 3" stroke="black" stroke-width="5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="extended__info hidden">
+                            <div class="links">
+                                <a href="" class="link">↗ Lista de Candidatos</a>
+                                <a href="" class="link">↗ Histórico de Atualizações</a>
+                            </div>
+                            <ul class="dates">
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Início</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Iniciado por Gustavo Letério</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Última Atualização</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Fechamento da Vaga</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Término</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>"Inicío Incorreto" - Gustavo Letério</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="vacancy">
+                        <div class="main__info">
+                            <div class="primary__info">
+                                <div class="info__line red"></div>
+                                <div class="vacancy__info">
+                                    <p class="vacancy__name">Desenvolvedor Java</p>
+                                    <p class="vacancy__enterprise">Lojas Riachuelo</p>
+                                </div>
+                            </div>
+                            <p class="vacancy__status red">Período de Entrevistas</p>
+                            <svg class="dropdown__icon" id="dropdownIcon" width="16" height="16" viewBox="0 0 32 21"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 3L15.5 18L28 3" stroke="black" stroke-width="5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="extended__info hidden">
+                            <div class="links">
+                                <a href="" class="link">↗ Lista de Candidatos</a>
+                                <a href="" class="link">↗ Histórico de Atualizações</a>
+                            </div>
+                            <ul class="dates">
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Início</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Iniciado por Gustavo Letério</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Última Atualização</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Fechamento da Vaga</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Término</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>"Inicío Incorreto" - Gustavo Letério</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="vacancy">
+                        <div class="main__info">
+                            <div class="primary__info">
+                                <div class="info__line red"></div>
+                                <div class="vacancy__info">
+                                    <p class="vacancy__name">Desenvolvedor Java</p>
+                                    <p class="vacancy__enterprise">Lojas Riachuelo</p>
+                                </div>
+                            </div>
+                            <p class="vacancy__status red">Período de Entrevistas</p>
+                            <svg class="dropdown__icon" id="dropdownIcon" width="16" height="16" viewBox="0 0 32 21"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 3L15.5 18L28 3" stroke="black" stroke-width="5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="extended__info hidden">
+                            <div class="links">
+                                <a href="" class="link">↗ Lista de Candidatos</a>
+                                <a href="" class="link">↗ Histórico de Atualizações</a>
+                            </div>
+                            <ul class="dates">
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Início</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Iniciado por Gustavo Letério</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Última Atualização</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Fechamento da Vaga</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Término</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>"Inicío Incorreto" - Gustavo Letério</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="vacancy">
+                        <div class="main__info">
+                            <div class="primary__info">
+                                <div class="info__line red"></div>
+                                <div class="vacancy__info">
+                                    <p class="vacancy__name">Desenvolvedor Java</p>
+                                    <p class="vacancy__enterprise">Lojas Riachuelo</p>
+                                </div>
+                            </div>
+                            <p class="vacancy__status red">Período de Entrevistas</p>
+                            <svg class="dropdown__icon" id="dropdownIcon" width="16" height="16" viewBox="0 0 32 21"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 3L15.5 18L28 3" stroke="black" stroke-width="5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="extended__info hidden">
+                            <div class="links">
+                                <a href="" class="link">↗ Lista de Candidatos</a>
+                                <a href="" class="link">↗ Histórico de Atualizações</a>
+                            </div>
+                            <ul class="dates">
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Início</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Iniciado por Gustavo Letério</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Última Atualização</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Fechamento da Vaga</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Término</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>"Inicío Incorreto" - Gustavo Letério</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="vacancy">
+                        <div class="main__info">
+                            <div class="primary__info">
+                                <div class="info__line red"></div>
+                                <div class="vacancy__info">
+                                    <p class="vacancy__name">Desenvolvedor Java</p>
+                                    <p class="vacancy__enterprise">Lojas Riachuelo</p>
+                                </div>
+                            </div>
+                            <p class="vacancy__status red">Período de Entrevistas</p>
+                            <svg class="dropdown__icon" id="dropdownIcon" width="16" height="16" viewBox="0 0 32 21"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 3L15.5 18L28 3" stroke="black" stroke-width="5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="extended__info hidden">
+                            <div class="links">
+                                <a href="" class="link">↗ Lista de Candidatos</a>
+                                <a href="" class="link">↗ Histórico de Atualizações</a>
+                            </div>
+                            <ul class="dates">
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Início</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Iniciado por Gustavo Letério</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Última Atualização</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Fechamento da Vaga</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Término</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>"Inicío Incorreto" - Gustavo Letério</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="vacancy">
+                        <div class="main__info">
+                            <div class="primary__info">
+                                <div class="info__line red"></div>
+                                <div class="vacancy__info">
+                                    <p class="vacancy__name">Desenvolvedor Java</p>
+                                    <p class="vacancy__enterprise">Lojas Riachuelo</p>
+                                </div>
+                            </div>
+                            <p class="vacancy__status red">Período de Entrevistas</p>
+                            <svg class="dropdown__icon" id="dropdownIcon" width="16" height="16" viewBox="0 0 32 21"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 3L15.5 18L28 3" stroke="black" stroke-width="5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="extended__info hidden">
+                            <div class="links">
+                                <a href="" class="link">↗ Lista de Candidatos</a>
+                                <a href="" class="link">↗ Histórico de Atualizações</a>
+                            </div>
+                            <ul class="dates">
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Início</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Iniciado por Gustavo Letério</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Última Atualização</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Fechamento da Vaga</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Término</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>"Inicío Incorreto" - Gustavo Letério</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="vacancy">
+                        <div class="main__info">
+                            <div class="primary__info">
+                                <div class="info__line red"></div>
+                                <div class="vacancy__info">
+                                    <p class="vacancy__name">Desenvolvedor Java</p>
+                                    <p class="vacancy__enterprise">Lojas Riachuelo</p>
+                                </div>
+                            </div>
+                            <p class="vacancy__status red">Período de Entrevistas</p>
+                            <svg class="dropdown__icon" id="dropdownIcon" width="16" height="16" viewBox="0 0 32 21"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 3L15.5 18L28 3" stroke="black" stroke-width="5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="extended__info hidden">
+                            <div class="links">
+                                <a href="" class="link">↗ Lista de Candidatos</a>
+                                <a href="" class="link">↗ Histórico de Atualizações</a>
+                            </div>
+                            <ul class="dates">
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Início</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Iniciado por Gustavo Letério</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Última Atualização</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Fechamento da Vaga</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Término</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>"Inicío Incorreto" - Gustavo Letério</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="vacancy">
+                        <div class="main__info">
+                            <div class="primary__info">
+                                <div class="info__line red"></div>
+                                <div class="vacancy__info">
+                                    <p class="vacancy__name">Desenvolvedor Java</p>
+                                    <p class="vacancy__enterprise">Lojas Riachuelo</p>
+                                </div>
+                            </div>
+                            <p class="vacancy__status red">Período de Entrevistas</p>
+                            <svg class="dropdown__icon" id="dropdownIcon" width="16" height="16" viewBox="0 0 32 21"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 3L15.5 18L28 3" stroke="black" stroke-width="5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="extended__info hidden">
+                            <div class="links">
+                                <a href="" class="link">↗ Lista de Candidatos</a>
+                                <a href="" class="link">↗ Histórico de Atualizações</a>
+                            </div>
+                            <ul class="dates">
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Início</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Iniciado por Gustavo Letério</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Última Atualização</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Fechamento da Vaga</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Término</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>"Inicío Incorreto" - Gustavo Letério</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="vacancy">
+                        <div class="main__info">
+                            <div class="primary__info">
+                                <div class="info__line red"></div>
+                                <div class="vacancy__info">
+                                    <p class="vacancy__name">Desenvolvedor Java</p>
+                                    <p class="vacancy__enterprise">Lojas Riachuelo</p>
+                                </div>
+                            </div>
+                            <p class="vacancy__status red">Período de Entrevistas</p>
+                            <svg class="dropdown__icon" id="dropdownIcon" width="16" height="16" viewBox="0 0 32 21"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 3L15.5 18L28 3" stroke="black" stroke-width="5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="extended__info hidden">
+                            <div class="links">
+                                <a href="" class="link">↗ Lista de Candidatos</a>
+                                <a href="" class="link">↗ Histórico de Atualizações</a>
+                            </div>
+                            <ul class="dates">
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Início</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Iniciado por Gustavo Letério</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Última Atualização</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Fechamento da Vaga</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Término</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>"Inicío Incorreto" - Gustavo Letério</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="vacancy">
+                        <div class="main__info">
+                            <div class="primary__info">
+                                <div class="info__line red"></div>
+                                <div class="vacancy__info">
+                                    <p class="vacancy__name">Desenvolvedor Java</p>
+                                    <p class="vacancy__enterprise">Lojas Riachuelo</p>
+                                </div>
+                            </div>
+                            <p class="vacancy__status red">Período de Entrevistas</p>
+                            <svg class="dropdown__icon" id="dropdownIcon" width="16" height="16" viewBox="0 0 32 21"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 3L15.5 18L28 3" stroke="black" stroke-width="5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="extended__info hidden">
+                            <div class="links">
+                                <a href="" class="link">↗ Lista de Candidatos</a>
+                                <a href="" class="link">↗ Histórico de Atualizações</a>
+                            </div>
+                            <ul class="dates">
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Início</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Iniciado por Gustavo Letério</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Última Atualização</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Fechamento da Vaga</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Término</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>"Inicío Incorreto" - Gustavo Letério</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="vacancy">
+                        <div class="main__info">
+                            <div class="primary__info">
+                                <div class="info__line red"></div>
+                                <div class="vacancy__info">
+                                    <p class="vacancy__name">Desenvolvedor Java</p>
+                                    <p class="vacancy__enterprise">Lojas Riachuelo</p>
+                                </div>
+                            </div>
+                            <p class="vacancy__status red">Período de Entrevistas</p>
+                            <svg class="dropdown__icon" id="dropdownIcon" width="16" height="16" viewBox="0 0 32 21"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 3L15.5 18L28 3" stroke="black" stroke-width="5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="extended__info hidden">
+                            <div class="links">
+                                <a href="" class="link">↗ Lista de Candidatos</a>
+                                <a href="" class="link">↗ Histórico de Atualizações</a>
+                            </div>
+                            <ul class="dates">
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Início</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Iniciado por Gustavo Letério</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Última Atualização</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Fechamento da Vaga</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Término</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>"Inicío Incorreto" - Gustavo Letério</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="vacancy">
+                        <div class="main__info">
+                            <div class="primary__info">
+                                <div class="info__line red"></div>
+                                <div class="vacancy__info">
+                                    <p class="vacancy__name">Desenvolvedor Java</p>
+                                    <p class="vacancy__enterprise">Lojas Riachuelo</p>
+                                </div>
+                            </div>
+                            <p class="vacancy__status red">Período de Entrevistas</p>
+                            <svg class="dropdown__icon" id="dropdownIcon" width="16" height="16" viewBox="0 0 32 21"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 3L15.5 18L28 3" stroke="black" stroke-width="5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="extended__info hidden">
+                            <div class="links">
+                                <a href="" class="link">↗ Lista de Candidatos</a>
+                                <a href="" class="link">↗ Histórico de Atualizações</a>
+                            </div>
+                            <ul class="dates">
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Início</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Iniciado por Gustavo Letério</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Última Atualização</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>Fechamento da Vaga</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="date-wrapper">
+                                        <span class="title">Data de Término</span>
+                                        <span class="date">09/09/2022</span>
+                                    </div>
+                                    <div class="description">
+                                        <span>"Inicío Incorreto" - Gustavo Letério</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </article>
-        </section>
-        <section class="chart__info">
-            <span class="info green">• Em Aberto</span>
-            <span class="info yellow">• Em Progresso</span>
-            <span class="info red">• Finalizado</span>
         </section>
     </main>
 </body>
