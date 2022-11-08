@@ -6,18 +6,23 @@
 
 .schedule__wrapper .head {
     display: flex;
-    width: calc(100% - 5px);
+    width: 100%;
     justify-content: space-between;
     align-items: stretch;
     background-color: white;
 }
 
 .schedule__wrapper .head span {
-    width: 100%;
+    width: calc(25% - 1px);
     border: 1px solid #ccc;
     padding: .75rem;
     text-align: center;
 }
+
+.schedule__wrapper .head span:last-child {
+    width: calc(25% + 5px);
+}
+
 
 .schedule__wrapper .head span:first-child {
     border-radius: var(--border-radius) 0 0 0;

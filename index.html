@@ -2,6 +2,8 @@
 <html lang="pt-BR"">
 <head>
     <meta charset=" UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Author: Gustavo Letério, Illustrator: Gustavo Letério, Category: System, Client: SIS Consultoria">
 <link rel="stylesheet" type="text/css" href="index.css">
 <title>Hunting - SIS</title>
 </head>
@@ -9,20 +11,20 @@
 <body>
     <script src="index.js" defer></script>
     <nav class="header" id="header">
-        <a href="/index.html" target="main"><img src="/src/images/logo.webp" alt="Página Inicial"></a>
+        <a href="/pages/main/main.html" target="main"><img src="/src/images/logo.webp" alt="Página Inicial"></a>
         <div>
-            <a id="hdDropdownTrigger" class="profile">
-                <ul>
+            <div id="hdDropdownTrigger" class="profile">
+                <ul class="links">
                     <li class="profile__name">Gustavo Letério</li>
                     <li class="profile__function">Hunter Riachuelo</li>
                 </ul>
                 <img src="./src/images/profile-pic.webp" alt="Foto de Perfil" class="profile__pic">
-            </a>
+            </div>
             <ul class="dropdown" id="hdDropdownContent">
-                <li><a href="" target="main">Editar Perfil</a></li>
-                <li><a href="" target="main">Configurações</a></li>
-                <li><a href="" target="main">Reportar Bug</a></li>
-                <li><a href="" target="main">Sair</a></li>
+                <li><a href="#" target="main">Editar Perfil</a></li>
+                <li><a href="#" target="main">Configurações</a></li>
+                <li><a href="#" target="main">Reportar Bug</a></li>
+                <li><a href="#" target="main">Sair</a></li>
             </ul>
         </div>
     </nav>
@@ -38,27 +40,27 @@
                         d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
                 </svg>
             </button>
-            <ul class="items">
+            <ul class="items" id="sbLinks">
                 <li>
-                    <a id="sbDropdownTrigger" style="white-space: nowrap;">
+                    <div id="sbDropdownTrigger" style="white-space: nowrap;">
                         <span>Meus Candidatos</span>
                         <svg class="dropdown__icon" id="dropdownIcon" width="16" height="16" viewBox="0 0 32 21"
                             fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M3 3L15.5 18L28 3" stroke="black" stroke-width="5" stroke-linecap="round"
                                 stroke-linejoin="round" />
                         </svg>
-                    </a>
+                    </div>
                     <ul class="dropdown__menu" id="sbDropdownContent">
                         <li><a href="./pages/vacancies/vacancies.html" target="main">Recém Chegados</a></li>
                         <li><a href="./pages/vacancies/vacancies.html" target="main">Em Progresso</a></li>
                         <li><a href="./pages/vacancies/vacancies.html" target="main">Finalizados</a></li>
                     </ul>
                 </li>
-                <li><a href="">Empresas</a></li>
-                <li><a href="">Calendário de Atribuições</a></li>
+                <li><a href="#">Empresas</a></li>
+                <li><a href="#">Calendário de Atribuições</a></li>
             </ul>
         </section>
-        <iframe id="iframe" src="./pages/main/main.html" frameborder="0" name="main"></iframe>
+        <iframe id="iframe" title="Application" src="./pages/main/main.html" frameborder="0" name="main"></iframe>
     </main>
 </body>
 

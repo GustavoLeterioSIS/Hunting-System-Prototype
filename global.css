@@ -6,7 +6,7 @@
     --backgroud-color: #FFF;
     --border-color: #DDD;
     --light-gray: #8b8b8b;
-    --focus-color: #a80044;
+    --focus-color: #0084ff;
     --hover-color: #ffb600;
     --accent-color: #00cc6b;
     --secondary-color: #a80044;
@@ -22,17 +22,14 @@
     width: 5px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
     background: #DDD;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
     background: #999;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #666;
 }

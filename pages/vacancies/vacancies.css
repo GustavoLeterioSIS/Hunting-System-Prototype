@@ -1,9 +1,7 @@
 @import url("/global.css");
 
-
 @import url("/pages/vacancies/components/enterprise-list.css");
 @import url("/pages/vacancies/components/vacancies-list.css");
-@import url("/pages/vacancies/components/chart-info.css");
 
 body {
     margin: 0;

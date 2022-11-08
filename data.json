@@ -1,0 +1,140 @@
+{
+    "enterprises": [
+      {
+        "name": "Lojas Riachuelo",
+        "logo": "/src/images/enterprises/logo/riachuelo.webp",
+        "vacancies": [
+          {
+            "name": "Java Developer",
+            "status": "done",
+            "statusDescription": "Contratação Efetuada",
+            "taskOwner": "Gustavo Letério",
+            "hired": "Vinicíus Letério",
+            "updates": [
+              {
+                "user": "Gustavo Letério",
+                "date": "2022-09-09T14:58:34.000Z",
+                "description": "start date"
+              },
+              {
+                "user": "Gustavo Letério",
+                "date": "2022-09-21T12:56:04.000Z",
+                "description": "accept task"
+              },
+              {
+                "user": "Gustavo Letério",
+                "date": "2022-09-21T12:56:04.000Z",
+                "description": "finished interviews"
+              },
+              {
+                "user": "Gustavo Letério",
+                "date": "10/05/2022 10:36:44",
+                "description": "contract made"
+              }
+            ]
+          },
+          {
+            "name": "Javascript Developer",
+            "status": "undone",
+            "statusDescription": "Esperando Iniciar",
+            "taskOwner": null,
+            "hired": null,
+            "updates": [
+              {
+                "user": "Gustavo Letério",
+                "date": "2022-09-09T14:58:34.000Z",
+                "description": "start date"
+              }
+            ]
+          },
+          {
+            "name": "Product Owner",
+            "status": "inprogress",
+            "statusDescription": "Período de Entrevistas",
+            "taskOwner": "Gustavo Letério",
+            "hired": null,
+            "updates": [
+              {
+                "user": "Gustavo Letério",
+                "date": "2022-09-09T14:58:34.000Z",
+                "description": "start date"
+              },
+              {
+                "user": "Gustavo Letério",
+                "date": "2022-09-21T12:56:04.000Z",
+                "description": "accept task"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Banco Bradesco",
+        "logo": "/src/images/enterprises/logo/bradesco.webp",
+        "vacancies": [
+          {
+            "name": "Java Developer",
+            "status": "done",
+            "statusDescription": "Contratação Efetuada",
+            "taskOwner": "Gustavo Letério",
+            "hired": "Vinicíus Letério",
+            "updates": [
+              {
+                "user": "Gustavo Letério",
+                "date": "2022-09-09T14:58:34.000Z",
+                "description": "start date"
+              },
+              {
+                "user": "Gustavo Letério",
+                "date": "2022-09-21T12:56:04.000Z",
+                "description": "accept task"
+              },
+              {
+                "user": "Gustavo Letério",
+                "date": "2022-09-21T12:56:04.000Z",
+                "description": "finished interviews"
+              },
+              {
+                "user": "Gustavo Letério",
+                "date": "10/05/2022 10:36:44",
+                "description": "contract made"
+              }
+            ]
+          },
+          {
+            "name": "Javascript Developer",
+            "status": "undone",
+            "statusDescription": "Esperando Iniciar",
+            "taskOwner": null,
+            "hired": null,
+            "updates": [
+              {
+                "user": "Gustavo Letério",
+                "date": "2022-09-09T14:58:34.000Z",
+                "description": "start date"
+              }
+            ]
+          },
+          {
+            "name": "Product Owner",
+            "status": "inprogress",
+            "statusDescription": "Período de Entrevistas",
+            "taskOwner": "Gustavo Letério",
+            "hired": null,
+            "updates": [
+              {
+                "user": "Gustavo Letério",
+                "date": "2022-09-09T14:58:34.000Z",
+                "description": "start date"
+              },
+              {
+                "user": "Gustavo Letério",
+                "date": "2022-09-21T12:56:04.000Z",
+                "description": "accept task"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

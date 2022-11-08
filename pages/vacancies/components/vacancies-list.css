@@ -1,8 +1,6 @@
 .vacancies-list {
     width: 66%;
-    padding-right: .5vw;
     display: flex;
-    gap: .5%;
     flex-flow: column nowrap;
 }
 
@@ -23,7 +21,6 @@
     width: 100%;
     display: flex;
     flex-wrap: row nowrap;
-    justify-content: space-between;
     align-items: center;
     gap: 5%;
 }
@@ -35,10 +32,8 @@
 }
 
 .vacancies-list .vacancies-header .search-input>input {
-    font-size: clamp(.7rem, 1.5vw, 1.2rem);
+    font-size: clamp(.7rem, 1.5vw, 1rem);
     padding: .25rem;
-    padding-top: 0;
-    background-color: transparent;
     border: none;
     outline: none;
     border-bottom: 1px solid var(--light-gray);
@@ -55,25 +50,16 @@
 }
 
 .vacancies-list .vacancies-header button {
-    margin: 0;
-    padding: 0;
     background-color: transparent;
     border: none;
+    border-bottom: 1px solid var(--light-gray);
     cursor: pointer;
     width: clamp(.7rem, 1.5vw, 1.2rem);
     width: 10%;
 }
 
-.vacancies-list .vacancies-header button svg {
-    width: clamp(.8rem, 1.5vw, 1.3rem);
-}
-
-.vacancies-list .vacancies-header button svg path {
-    transition: 200ms ease-in-out;
-}
-
-.vacancies-list .vacancies-header button:hover svg path {
-    fill: var(--hover-color);
+.vacancies-list .vacancies-header button img {
+    width: clamp(.7rem, 1.5vw, 1.2rem);
 }
 
 .vacancies-list .vacancies-header .checkboxes {
@@ -84,7 +70,7 @@
 }
 
 .vacancies-list .vacancies-header .checkbox-label {
-    font-size: clamp(.7rem, 1.2vw, 1.2rem);
+    font-size: clamp(.9rem, 1.2vw, 1.2rem);
     display: flex;
     align-items: center;
     gap: 5%;
@@ -100,6 +86,8 @@
 
 .vacancies-list .vacancies {
     overflow-y: scroll;
+    /* Don't Remove this Padding. It's Important to not crop the bottom, because of the overflow-y. */
+    padding-bottom:2px;
     flex-flow: column nowrap;
     display: flex;
     gap: .5%;
@@ -141,6 +129,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+    width: 50%;
     height: 100%;
 }
 
@@ -168,7 +157,9 @@
 
 .vacancies-list .vacancy .vacancy__status {
     font-size: clamp(.8rem, 2vw, 1.2rem);
+    width: 35%;
     padding: .5% 2%;
+    text-align: center;
 }
 
 .vacancies-list .vacancy .extended__info {
@@ -240,4 +231,16 @@
 .vacancies-list .vacancy .extended__info .dates .description {
     box-shadow: inset 0 0 5px -2px #333;
     padding: 2%;
+}
+
+.vacancy__placeholder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--backgroud-color);
+    color: var(--light-gray);
+    text-align: center;
+    padding: 0 5%;
+    font-size: clamp(2rem, 5vw, 3rem);
 }
