@@ -1,7 +1,24 @@
+/*APAGAR ISSO */
+{
+    const vacancy = document.querySelector(".vacancy")
+    vacancy.addEventListener("click", () => {
+        const vacExt = vacancy.parentNode.querySelector(".extended__info");
+        const dropIcon = vacancy.querySelector(".dropdown__icon");
+        vacExt.classList.toggle("open");
+        dropIcon.classList.toggle("open");
+    });
+}
+
 const checkboxes = {
     done: document.getElementById("done"),
     inprogress: document.getElementById("inprogress"),
     undone: document.getElementById("undone")
+}
+
+const resetCheckboxes = () => {
+    Object.values(checkboxes).forEach(checkbox => {
+        checkbox.checked = false;
+    });
 }
 
 Object.values(checkboxes).forEach(checkbox => {
@@ -14,12 +31,17 @@ Object.values(checkboxes).forEach(checkbox => {
     })
 });
 
-
-fetch("/data.json").then(res => res.json()).then(data => {
-    data.enterprises.forEach(enterprise => {
-        appendEntCard(enterprise);
+const reloadEnterprises = () => {
+    fetch("/data.json").then(res => res.json()).then(data => {
+        const results = document.getElementById("enterpriseResults");
+        var listLength = 0;
+        data.enterprises.forEach(enterprise => {
+            appendEntCard(enterprise);
+        });
+        results.innerHTML = `${listLength} Resultados`
     });
-});
+}
+reloadEnterprises();
 
 const reloadVacancies = () => {
     clearVacancyItems();
@@ -27,7 +49,9 @@ const reloadVacancies = () => {
         const enterprise = data.enterprises.filter(enterprise => enterprise.name == localStorage.getItem("enterprise"))[0];
         var listLength = 0;
         const results = document.getElementById("vacancyResults");
+
         enterprise.vacancies.forEach(vacancy => {
+            //Filter and append by status
             if (localStorage.getItem('enterprise') == enterprise.name) {
                 if (!checkboxes.done.checked && !checkboxes.inprogress.checked && !checkboxes.undone.checked) {
                     appendVacCard(enterprise.name, vacancy);
@@ -81,11 +105,7 @@ const clearVacancyItems = () => {
     });
 }
 
-const resetCheckboxes = () => {
-    checkboxes.done.checked = false
-    checkboxes.inprogress.checked = false
-    checkboxes.undone.checked = false
-}
+
 if (localStorage.getItem('enterprise')) {
     reloadVacancies();
 }
