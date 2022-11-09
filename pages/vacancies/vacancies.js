@@ -10,9 +10,8 @@ const reloadEnterprises = () => {
 const reloadVacancies = () => {
     fetch("/data.json").then(res => res.json()).then(data => {
         const enterprise = data.enterprises.filter(enterprise => enterprise.name == localStorage.getItem("enterprise"))[0];
-
         //Sort Vacancies
-        enterprise.vacancies.sort((a, b) => (a.status > b.status ? -1 : 1))
+        enterprise.vacancies.sort((a, b) => (a.status > b.status ? -1 : 1));
 
         clearVacancyItems();
 
@@ -32,6 +31,7 @@ const reloadVacancies = () => {
                     appendVacByFilter("undone");
                 }
             }
+            
             inputFilter(vacInput, "vacancy");
             showSearchResult("vacancy");
         });

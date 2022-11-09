@@ -92,7 +92,7 @@ const genExtendedCard = (card, vacancy) => {
     dates.appendChild(createEventDescription("Data de Início", vacancy.updates[0]));
     dates.appendChild(createEventDescription("Última Atualização", vacancy.updates[vacancy.updates.length - 1]));
     if (vacancy.status == "done")
-        dates.appendChild(createEventDescription("Data de Início", vacancy.updates[vacancy.updates.length - 1]));
+        dates.appendChild(createEventDescription("Data de Finalização", vacancy.updates[vacancy.updates.length - 1]));
 
     return card;
 }
