@@ -41,3 +41,7 @@ main {
     color: #8F0000;
     border: 2px solid #8F0000;
 }
+
+.hidden {
+    display: none !important;
+}

@@ -1,45 +1,47 @@
 const reloadEnterprises = () => {
     fetch("/data.json").then(res => res.json()).then(data => {
-        const results = document.getElementById("enterpriseResults");
-        var listLength = 0;
         data.enterprises.forEach(enterprise => {
             appendEntCard(enterprise);
-            listLength++;
         });
-        results.innerHTML = `${listLength} Resultados`
+        showSearchResult("enterprise");
     });
 }
 
 const reloadVacancies = () => {
     fetch("/data.json").then(res => res.json()).then(data => {
         const enterprise = data.enterprises.filter(enterprise => enterprise.name == localStorage.getItem("enterprise"))[0];
-        var listLength = 0;
-
         clearVacancyItems();
 
         enterprise.vacancies.forEach(vacancy => {
             const appendVacByFilter = (filter) => {
                 if (checkboxes[filter].checked && vacancy.status == filter) {
                     appendVacCard(enterprise.name, vacancy);
-                    listLength++;
                 }
             }
 
             if (localStorage.getItem('enterprise') == enterprise.name) {
                 if (!checkboxes.done.checked && !checkboxes.inprogress.checked && !checkboxes.undone.checked) {
                     appendVacCard(enterprise.name, vacancy);
-                    listLength++;
                 } else {
                     appendVacByFilter("done");
                     appendVacByFilter("inprogress");
                     appendVacByFilter("undone");
                 }
             }
+            inputFilter(vacInput, "vacancy");
         });
-        //Show Search Result
-        const results = document.getElementById("vacancyResults");
-        results.innerHTML = `${listLength} Resultados`
+        showSearchResult("vacancy");
     });
+}
+
+const showSearchResult = (resultType) => {
+    //Show Search Result
+    const results = document.getElementById(`${resultType}Results`);
+    const items = document.querySelectorAll(`.${resultType}`);
+    results.innerHTML = `${Object.values(items).filter(item => {
+            if (!item.className.split(" ")[1])
+                return item;
+        }).length} Resultados`
 }
 
 const clearVacancyItems = () => {
@@ -62,7 +64,7 @@ const resetCheckboxes = () => {
 
 Object.values(checkboxes).forEach(checkbox => {
     checkbox.addEventListener("change", () => {
-        reloadVacancies();
+        reloadVacancies()
         if (checkboxes.done.checked &&
             checkboxes.inprogress.checked &&
             checkboxes.undone.checked)
@@ -96,6 +98,3 @@ const genTag = (tagName, classNames, attributes, innerText) => {
     if (innerText) tag.innerText = innerText;
     return tag;
 }
-
-
-

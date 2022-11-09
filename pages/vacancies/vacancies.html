@@ -9,6 +9,7 @@
 <body>
     <script src="./js/genEnterpriseCard.js" defer></script>
     <script src="./js/genVacancyCard.js" defer></script>
+    <script src="./js/search.js" defer></script>
     <script src="vacancies.js" defer></script>
 
     <main>
@@ -36,9 +37,8 @@
             <article class="vacancies-list">
                 <div class="vacancies-header">
                     <form>
-                        <label for="searchVacancies" class="search-input">
-                            <input type="search" name="searchVacancies" id="searchVacancies"
-                                placeholder="Pesquisar Vagas">
+                        <label for="searchVacancy" class="search-input">
+                            <input type="search" name="searchVacancy" id="searchVacancy" placeholder="Pesquisar Vagas">
                             <button>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                     <path
@@ -66,57 +66,8 @@
                     <span class="results" id="vacancyResults">17 Resultados</span>
                 </div>
                 <div class="vacancies" id="vacancyItems">
-                    <!-- <div class="vacancy__placeholder">
+                    <div class="vacancy__placeholder">
                         <span>Selecione uma empresa para começar a busca!</span>
-                    </div> -->
-                    <div class="vacancy">
-                        <div class="main__info">
-                            <div class="primary__info">
-                                <div class="info__line red"></div>
-                                <div class="vacancy__info">
-                                    <p class="vacancy__name">Desenvolvedor Java</p>
-                                    <p class="vacancy__enterprise">Lojas Riachuelo</p>
-                                </div>
-                            </div>
-                            <p class="vacancy__status red">Período de Entrevistas</p>
-                            <img src="/src/images/dropdownIcon.svg" alt="" class="dropdown__icon">
-                        </div>
-                        <div class="extended__info hidden">
-                            <div class="links">
-                                <a href="" class="link">↗ Lista de Candidatos</a>
-                                <a href="" class="link">↗ Histórico de Atualizações</a>
-                            </div>
-                            <ul class="dates">
-                                <li>
-                                    <div class="date-wrapper">
-                                        <span class="title">Data de Início</span>
-                                        <span class="date">09/09/2022</span>
-                                    </div>
-                                    <div class="description">
-                                        <span>Iniciado por Gustavo Letério</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="date-wrapper">
-                                        <span class="title">Última Atualização</span>
-                                        <span class="date">09/09/2022</span>
-                                    </div>
-                                    <div class="description">
-                                        <span>Fechamento da Vaga</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="date-wrapper">
-                                        <span class="title">Data de Término</span>
-                                        <span class="date">09/09/2022</span>
-                                    </div>
-                                    <div class="description">
-                                        <span>"Inicío Incorreto" - Gustavo Letério</span>
-                                    </div>
-                                </li>
-                            </ul>
-                            </table>
-                        </div>
                     </div>
                 </div>
             </article>

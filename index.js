@@ -14,52 +14,50 @@ const hdTrigger = document.getElementById("hdDropdownTrigger");
 const hdDropdownContent = document.getElementById("hdDropdownContent");
 const hdLinks = Object.values(hdDropdownContent.getElementsByTagName("a"));
 
-
 const iframe = document.getElementById("iframe");
 
-hdLinks.forEach(link => {
-  link.addEventListener("click", () => {
-    hdDropdownContent.classList.remove("displayed");
-  });
+header.addEventListener("click", e => {
+  e.stopPropagation();
+  closeSidebar();
+  hdDropdownContent.classList.remove("displayed");
+})
+
+sidebar.addEventListener("click", e => {
+  hdDropdownContent.classList.remove("displayed");
 });
 
-sbLinks.forEach((link, i) => {
-  link.addEventListener("click", () => {
-    closeSidebarDropdown();
-    closeSidebar();
-  });
-});
-
-//Global Event
-window.addEventListener('click', function (e) {
-  //Sidebar Pseudo Event
-  if (sbButton.contains(e.target)) {
-    toggleSidebar();
-  } else if (!sidebar.contains(e.target)) {
-    closeSidebar();
-  }
-
-  //Sidebar Inner Dropdown Pseudo Event
-  if (sbDropdownTrigger.contains(e.target)) {
-    toggleSidebarDropdown();
-  } else {
-    closeSidebarDropdown();
-  }
-
-  //Header Dropdown Pseudo Event
-  if (hdTrigger.contains(e.target)) {
-    hdDropdownContent.classList.toggle("displayed");
-  } else if (!header.contains(e.target)) {
-    hdDropdownContent.classList.remove("displayed");
-  }
-});
-
-//The window Event can't capture the iframe onClick, the solution to close everything is creating a new Event.
 //For each Iframe's Reload, a new contentWindow Event Must be created, because the iframe forgot it event.
 iframe.addEventListener("load", () => {
   iframe.contentWindow.document.body.addEventListener("click", () => {
     hdDropdownContent.classList.remove("displayed");
     closeSidebar();
+  });
+});
+
+sbButton.addEventListener("click", () => {
+  toggleSidebar();
+});
+
+sbDropdownTrigger.addEventListener("click", () => {
+  toggleSidebarDropdown();
+});
+
+sbLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    closeSidebar();
+  });
+});
+
+hdTrigger.addEventListener("click", e => {
+  e.stopPropagation();
+  closeSidebar();
+  hdDropdownContent.classList.toggle("displayed");
+});
+
+
+hdLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    hdDropdownContent.classList.remove("displayed");
   });
 });
 

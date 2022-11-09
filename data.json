@@ -102,6 +102,64 @@
             ]
           },
           {
+            "name": "Python Developer",
+            "status": "done",
+            "statusDescription": "Contratação Efetuada",
+            "taskOwner": "Gustavo Letério",
+            "hired": "Vinicíus Letério",
+            "updates": [
+              {
+                "user": "Gustavo Letério",
+                "date": "2022-09-09T14:58:34.000Z",
+                "description": "Vaga Aberta"
+              },
+              {
+                "user": "Gustavo Letério",
+                "date": "2022-09-21T12:56:04.000Z",
+                "description": "Tarefa Aceita"
+              },
+              {
+                "user": "Gustavo Letério",
+                "date": "2022-09-21T12:56:04.000Z",
+                "description": "Entrevistas Finalizadas"
+              },
+              {
+                "user": "Gustavo Letério",
+                "date": "2022-09-21T12:56:04.000Z",
+                "description": "Contrato Efetuado"
+              }
+            ]
+          },
+          {
+            "name": "Javascript Developer",
+            "status": "done",
+            "statusDescription": "Contratação Efetuada",
+            "taskOwner": "Gustavo Letério",
+            "hired": "Vinicíus Letério",
+            "updates": [
+              {
+                "user": "Gustavo Letério",
+                "date": "2022-09-09T14:58:34.000Z",
+                "description": "Vaga Aberta"
+              },
+              {
+                "user": "Gustavo Letério",
+                "date": "2022-09-21T12:56:04.000Z",
+                "description": "Tarefa Aceita"
+              },
+              {
+                "user": "Gustavo Letério",
+                "date": "2022-09-21T12:56:04.000Z",
+                "description": "Entrevistas Finalizadas"
+              },
+              {
+                "user": "Gustavo Letério",
+                "date": "2022-09-21T12:56:04.000Z",
+                "description": "Contrato Efetuado"
+              }
+            ]
+          },
+          {
             "name": "Javascript Developer",
             "status": "undone",
             "statusDescription": "Esperando Iniciar",
