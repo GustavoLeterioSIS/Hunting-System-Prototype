@@ -20,13 +20,13 @@ const inputFilter = (input, tableType) => {
             } else {
                 item.classList.remove("hidden");
             }
-            showSearchResult(`${tableType}`);
         });
     } else {
         items.forEach(item => {
             item.classList.remove("hidden");
         });
     }
+    showSearchResult(`${tableType}`);
 }
 
 const showSearchResult = (resultType) => {

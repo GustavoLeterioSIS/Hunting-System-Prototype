@@ -33,6 +33,7 @@ const reloadVacancies = () => {
                 }
             }
             inputFilter(vacInput, "vacancy");
+            showSearchResult("vacancy");
         });
     });
 }
@@ -59,7 +60,7 @@ const resetCheckboxes = () => {
 
 Object.values(checkboxes).forEach(checkbox => {
     checkbox.addEventListener("change", () => {
-        reloadVacancies()
+        reloadVacancies();
         if (checkboxes.done.checked &&
             checkboxes.inprogress.checked &&
             checkboxes.undone.checked)
