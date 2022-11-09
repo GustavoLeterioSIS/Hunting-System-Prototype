@@ -110,6 +110,7 @@
 
 .enterprise-list .enterprise>a .enterprise__logo {
     width: 100%;
+    border: none;
 }
 
 .enterprise-list .enterprise .vertical-line {

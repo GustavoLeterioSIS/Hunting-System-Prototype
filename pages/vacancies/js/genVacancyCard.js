@@ -1,83 +1,59 @@
 const vacancyItems = document.getElementById("vacancyItems");
 
-const genVacancy = (entName, vacancy) => {
-    //Generating Card
-    const card = document.createElement("div")
-    card.classList.add("vacancy");
+const appendVacCard = (entName, vacancy) => {
+    const vacCard = vacancyItems.appendChild(genVacancy(entName, vacancy));
+    vacCard.addEventListener("click", () => {
+        const vacExt = vacCard.querySelector(".extended__info");
+        const dropIcon = vacCard.querySelector(".dropdown__icon");
+        vacExt.classList.toggle("open");
+        dropIcon.classList.toggle("open");
+    });
+}
 
-    const mainInfo = document.createElement("div")
-    mainInfo.classList.add("main__info");
+const genVacancy = (entName, vacancy) => {
+    const card = genClosedCard(entName, vacancy);
+    return genExtendedCard(card, vacancy);
+};
+
+
+const genClosedCard = (entName, vacancy) => {
+    //Generating Card
+    const card = genTag("div", "vacancy");
+
+    const mainInfo = genTag("div", "main__info");
     card.appendChild(mainInfo);
 
-    const primaryInfo = document.createElement("div")
-    primaryInfo.classList.add("primary__info");
+    const primaryInfo = genTag("div", "primary__info");
     mainInfo.appendChild(primaryInfo);
 
-    const infoLine = document.createElement("div")
-    infoLine.classList.add("info__line");
+    const infoLine = genTag("div", "info__line");
     primaryInfo.appendChild(infoLine);
 
-
-    const vacInfo = document.createElement("div")
-    vacInfo.classList.add("vacancy__info");
+    const vacInfo = genTag("div", "vacancy__info");
     primaryInfo.appendChild(vacInfo);
 
-    const vacName = document.createElement("p")
-    vacName.classList.add("vacancy__name");
-    vacName.innerText = vacancy.name;
+    const vacName = genTag("p", "vacancy__name", null, vacancy.name);
     vacInfo.appendChild(vacName);
 
-    const vacEnterprise = document.createElement("p")
-    vacEnterprise.classList.add("vacancy__enterprise");
-    vacEnterprise.innerText = entName;
+    const vacEnterprise = genTag("p", "vacancy__enterprise", null, entName);
     vacInfo.appendChild(vacEnterprise);
 
-    const vacStatus = document.createElement("p")
-    vacStatus.classList.add("vacancy__status");
-    vacStatus.innerText = vacancy.statusDescription;
+    const vacStatus = genTag("p", "vacancy__status", null, vacancy.statusDescription);
     mainInfo.appendChild(vacStatus);
 
-    const dropdownIcon = document.createElement("img");
-    dropdownIcon.classList.add("dropdown__icon");
-    dropdownIcon.setAttribute("src", "/src/images/dropdownIcon.svg");
-    dropdownIcon.setAttribute("alt", "Dropdown SVG Icon");
+    const dropdownIcon = genTag("img", "dropdown__icon", [{
+        name: "src",
+        content: "/src/images/dropdownIcon.svg"
+    }, {
+        name: "alt",
+        content: "Dropdown SVG Icon"
+    }]);
     mainInfo.appendChild(dropdownIcon);
-
-    const extendedInfo = document.createElement("div");
-    extendedInfo.classList.add("extended__info");
-    extendedInfo.classList.add("hidden");
-    card.appendChild(extendedInfo);
-
-    const links = document.createElement("div");
-    links.classList.add("links");
-    extendedInfo.appendChild(links);
-
-
-    const listCandidates = document.createElement("a");
-    listCandidates.classList.add("link");
-    listCandidates.setAttribute("href", "");
-    listCandidates.innerText = "↗ Lista de Candidatos"
-    links.appendChild(listCandidates);
-
-    const histAtt = document.createElement("a");
-    histAtt.classList.add("link");
-    histAtt.setAttribute("href", "");
-    histAtt.innerText = "↗ Histórico de Atualizações"
-    links.appendChild(histAtt);
-
-    const dates = document.createElement("ul");
-    dates.classList.add("dates");
-    extendedInfo.appendChild(dates);
-
-    dates.appendChild(createEventDescription("Data de Início", vacancy.updates[0].date, vacancy.updates[0].description));
-    dates.appendChild(createEventDescription("Última Atualização", vacancy.updates[vacancy.updates.length - 1].date, vacancy.updates[vacancy.updates.length - 1].description));
-    if (vacancy.status == "done")
-        dates.appendChild(createEventDescription("Data de Início", vacancy.updates[vacancy.updates.length - 1].date, vacancy.updates[vacancy.updates.length - 1].description));
 
     handleStatus([vacStatus, infoLine], vacancy.status);
 
     return card;
-};
+}
 
 const handleStatus = (elements, status) => {
     switch (status) {
@@ -100,29 +76,43 @@ const handleStatus = (elements, status) => {
     }
 }
 
-const createEventDescription = (titleText, dateText, descText) => {
-    const li = document.createElement("li");
+const genExtendedCard = (card, vacancy) => {
+    const extendedInfo = genTag("div", ["extended__info", "hidden"]);
+    card.appendChild(extendedInfo);
 
-    const dateWrapper = document.createElement("div");
-    dateWrapper.classList.add("date-wrapper");
+    const links = genTag("div", "links");
+    extendedInfo.appendChild(links);
+
+    links.appendChild(genLink("↗ Lista de Candidatos", ""));
+    links.appendChild(genLink("↗ Histórico de Atualizações", ""));
+
+    const dates = genTag("ul", "dates");
+    extendedInfo.appendChild(dates);
+
+    dates.appendChild(createEventDescription("Data de Início", vacancy.updates[0]));
+    dates.appendChild(createEventDescription("Última Atualização", vacancy.updates[vacancy.updates.length - 1]));
+    if (vacancy.status == "done")
+        dates.appendChild(createEventDescription("Data de Início", vacancy.updates[vacancy.updates.length - 1]));
+
+    return card;
+}
+
+const createEventDescription = (titleText, update) => {
+    const li = genTag("li");
+
+    const dateWrapper = genTag("div", "date-wrapper");
     li.appendChild(dateWrapper);
 
-    const title = document.createElement("span");
-    title.classList.add("title");
-    title.innerText = `${titleText}`;
+    const title = genTag("span", "title", null, titleText);
     dateWrapper.appendChild(title);
 
-    const date = document.createElement("span");
-    date.classList.add("date");
-    date.innerText = getDate(dateText);
+    const date = genTag("span", "date", null, getDate(update.date));
     dateWrapper.appendChild(date);
 
-    const descriptionWrapper = document.createElement("div");
-    descriptionWrapper.classList.add("description");
+    const descriptionWrapper = genTag("div", "description");
     li.appendChild(descriptionWrapper);
 
-    const description = document.createElement("span");
-    description.innerText = `${descText}`;
+    const description = genTag("span", null, null, `"${update.description}" - ${update.user}`);
     descriptionWrapper.appendChild(description);
 
     return li;
@@ -135,6 +125,14 @@ const getDate = (string) => {
         year: string.split("T")[0].split("-")[0]
     }
     return `${date.day}/${date.month}/${date.year}`;
+}
+
+const genLink = (text, href) => {
+    const link = genTag("a", "link", {
+        name: "href",
+        content: href
+    }, text);
+    return link;
 }
 /* 
 <div class="vacancy">

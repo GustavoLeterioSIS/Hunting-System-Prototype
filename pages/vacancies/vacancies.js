@@ -1,11 +1,50 @@
-/*APAGAR ISSO */
-{
-    const vacancy = document.querySelector(".vacancy")
-    vacancy.addEventListener("click", () => {
-        const vacExt = vacancy.parentNode.querySelector(".extended__info");
-        const dropIcon = vacancy.querySelector(".dropdown__icon");
-        vacExt.classList.toggle("open");
-        dropIcon.classList.toggle("open");
+const reloadEnterprises = () => {
+    fetch("/data.json").then(res => res.json()).then(data => {
+        const results = document.getElementById("enterpriseResults");
+        var listLength = 0;
+        data.enterprises.forEach(enterprise => {
+            appendEntCard(enterprise);
+            listLength++;
+        });
+        results.innerHTML = `${listLength} Resultados`
+    });
+}
+
+const reloadVacancies = () => {
+    fetch("/data.json").then(res => res.json()).then(data => {
+        const enterprise = data.enterprises.filter(enterprise => enterprise.name == localStorage.getItem("enterprise"))[0];
+        var listLength = 0;
+
+        clearVacancyItems();
+
+        enterprise.vacancies.forEach(vacancy => {
+            const appendVacByFilter = (filter) => {
+                if (checkboxes[filter].checked && vacancy.status == filter) {
+                    appendVacCard(enterprise.name, vacancy);
+                    listLength++;
+                }
+            }
+
+            if (localStorage.getItem('enterprise') == enterprise.name) {
+                if (!checkboxes.done.checked && !checkboxes.inprogress.checked && !checkboxes.undone.checked) {
+                    appendVacCard(enterprise.name, vacancy);
+                    listLength++;
+                } else {
+                    appendVacByFilter("done");
+                    appendVacByFilter("inprogress");
+                    appendVacByFilter("undone");
+                }
+            }
+        });
+        //Show Search Result
+        const results = document.getElementById("vacancyResults");
+        results.innerHTML = `${listLength} Resultados`
+    });
+}
+
+const clearVacancyItems = () => {
+    Object.values(vacancyItems.children).forEach(node => {
+        node.remove();
     });
 }
 
@@ -31,82 +70,32 @@ Object.values(checkboxes).forEach(checkbox => {
     })
 });
 
-const reloadEnterprises = () => {
-    fetch("/data.json").then(res => res.json()).then(data => {
-        const results = document.getElementById("enterpriseResults");
-        var listLength = 0;
-        data.enterprises.forEach(enterprise => {
-            appendEntCard(enterprise);
-        });
-        results.innerHTML = `${listLength} Resultados`
-    });
-}
-reloadEnterprises();
-
-const reloadVacancies = () => {
-    clearVacancyItems();
-    fetch("/data.json").then(res => res.json()).then(data => {
-        const enterprise = data.enterprises.filter(enterprise => enterprise.name == localStorage.getItem("enterprise"))[0];
-        var listLength = 0;
-        const results = document.getElementById("vacancyResults");
-
-        enterprise.vacancies.forEach(vacancy => {
-            //Filter and append by status
-            if (localStorage.getItem('enterprise') == enterprise.name) {
-                if (!checkboxes.done.checked && !checkboxes.inprogress.checked && !checkboxes.undone.checked) {
-                    appendVacCard(enterprise.name, vacancy);
-                    listLength++;
-                } else {
-                    if (checkboxes.done.checked && vacancy.status == "done") {
-                        appendVacCard(enterprise.name, vacancy);
-                        listLength++;
-                    }
-                    if (checkboxes.inprogress.checked && vacancy.status == "inprogress") {
-                        appendVacCard(enterprise.name, vacancy);
-                        listLength++;
-                    }
-                    if (checkboxes.undone.checked && vacancy.status == "undone") {
-                        appendVacCard(enterprise.name, vacancy);
-                        listLength++;
-                    }
-                }
-            }
-        });
-        results.innerHTML = `${listLength} Resultados`
-    });
-}
-
-const appendEntCard = (enterprise) => {
-    const entCard = enterpriseItems.appendChild(genEnterprise(enterprise));
-    entCard.addEventListener("click", e => {
-        localStorage.setItem('enterprise', entCard.querySelector(".enterprise__name").innerText);
-        reloadVacancies();
-        if (e.target != entCard.querySelector(".green") &&
-            e.target != entCard.querySelector(".yellow") &&
-            e.target != entCard.querySelector(".red")) {
-            resetCheckboxes();
-        }
-    });
-}
-
-const appendVacCard = (entName, vacancy) => {
-    const vacCard = vacancyItems.appendChild(genVacancy(entName, vacancy));
-    vacCard.addEventListener("click", () => {
-        console.log(vacCard)
-        const vacExt = vacCard.querySelector(".extended__info");
-        const dropIcon = vacCard.querySelector(".dropdown__icon");
-        vacExt.classList.toggle("open");
-        dropIcon.classList.toggle("open");
-    });
-}
-
-const clearVacancyItems = () => {
-    Object.values(vacancyItems.children).forEach(node => {
-        node.remove();
-    });
-}
-
-
 if (localStorage.getItem('enterprise')) {
     reloadVacancies();
 }
+reloadEnterprises();
+
+const genTag = (tagName, classNames, attributes, innerText) => {
+    const tag = document.createElement(tagName);
+    if (classNames) {
+        if (!Array.isArray(classNames))
+            tag.classList.add(classNames);
+        else
+            classNames.forEach(className => {
+                tag.classList.add(className);
+            });
+    }
+    if (attributes) {
+        if (!Array.isArray(attributes))
+            tag.setAttribute(attributes.name, attributes.content);
+        else
+            attributes.forEach(attribute => {
+                tag.setAttribute(attribute.name, attribute.content);
+            });
+    }
+    if (innerText) tag.innerText = innerText;
+    return tag;
+}
+
+
+
