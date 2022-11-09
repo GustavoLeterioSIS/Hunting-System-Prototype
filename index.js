@@ -35,6 +35,7 @@ iframe.addEventListener("load", () => {
 });
 
 sbButton.addEventListener("click", () => {
+  closeSidebarDropdown();
   toggleSidebar();
 });
 

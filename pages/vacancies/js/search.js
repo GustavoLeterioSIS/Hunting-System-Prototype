@@ -20,11 +20,21 @@ const inputFilter = (input, tableType) => {
             } else {
                 item.classList.remove("hidden");
             }
-            showSearchResult("vacancy");
+            showSearchResult(`${tableType}`);
         });
     } else {
         items.forEach(item => {
             item.classList.remove("hidden");
         });
     }
+}
+
+const showSearchResult = (resultType) => {
+    //Show Search Result
+    const results = document.getElementById(`${resultType}Results`);
+    const items = document.querySelectorAll(`.${resultType}`);
+    results.innerHTML = `${Object.values(items).filter(item => {
+            if (!item.className.split(" ")[1])
+                return item;
+        }).length} Resultados`
 }

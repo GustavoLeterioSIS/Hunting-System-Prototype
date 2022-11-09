@@ -5,6 +5,39 @@
         "logo": "/src/images/enterprises/logo/riachuelo.webp",
         "vacancies": [
           {
+            "name": "Product Owner",
+            "status": "inprogress",
+            "statusDescription": "Período de Entrevistas",
+            "taskOwner": "Gustavo Letério",
+            "hired": null,
+            "updates": [
+              {
+                "user": "Gustavo Letério",
+                "date": "2022-09-09T14:58:34.000Z",
+                "description": "Vaga Aberta"
+              },
+              {
+                "user": "Gustavo Letério",
+                "date": "2022-09-21T12:56:04.000Z",
+                "description": "Tarefa Aceita"
+              }
+            ]
+          },
+          {
+            "name": "Javascript Developer",
+            "status": "undone",
+            "statusDescription": "Esperando Iniciar",
+            "taskOwner": null,
+            "hired": null,
+            "updates": [
+              {
+                "user": "Gustavo Letério",
+                "date": "2022-09-09T14:58:34.000Z",
+                "description": "Vaga Aberta"
+              }
+            ]
+          },
+          {
             "name": "Java Developer",
             "status": "done",
             "statusDescription": "Contratação Efetuada",

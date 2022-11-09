@@ -10,6 +10,10 @@ const reloadEnterprises = () => {
 const reloadVacancies = () => {
     fetch("/data.json").then(res => res.json()).then(data => {
         const enterprise = data.enterprises.filter(enterprise => enterprise.name == localStorage.getItem("enterprise"))[0];
+
+        //Sort Vacancies
+        enterprise.vacancies.sort((a, b) => (a.status > b.status ? -1 : 1))
+
         clearVacancyItems();
 
         enterprise.vacancies.forEach(vacancy => {
@@ -30,19 +34,10 @@ const reloadVacancies = () => {
             }
             inputFilter(vacInput, "vacancy");
         });
-        showSearchResult("vacancy");
     });
 }
 
-const showSearchResult = (resultType) => {
-    //Show Search Result
-    const results = document.getElementById(`${resultType}Results`);
-    const items = document.querySelectorAll(`.${resultType}`);
-    results.innerHTML = `${Object.values(items).filter(item => {
-            if (!item.className.split(" ")[1])
-                return item;
-        }).length} Resultados`
-}
+
 
 const clearVacancyItems = () => {
     Object.values(vacancyItems.children).forEach(node => {
@@ -72,10 +67,31 @@ Object.values(checkboxes).forEach(checkbox => {
     })
 });
 
-if (localStorage.getItem('enterprise')) {
-    reloadVacancies();
+const setAmbient = () => {
+    reloadEnterprises();
+    if (localStorage.getItem('enterprise')) {
+        reloadVacancies();
+        vacInput.setAttribute("placeholder", `Vagas ${localStorage.getItem("enterprise")}`);
+    }
+    if (localStorage.getItem("checkbox")) {
+        switch (localStorage.getItem("checkbox")) {
+            case "done": {
+                checkboxes.done.checked = true;
+                break;
+            }
+            case "inprogress": {
+                checkboxes.inprogress.checked = true;
+                break;
+            }
+            case "undone": {
+                checkboxes.undone.checked = true;
+                break;
+            }
+        }
+        localStorage.removeItem("checkbox");
+    }
 }
-reloadEnterprises();
+setAmbient();
 
 const genTag = (tagName, classNames, attributes, innerText) => {
     const tag = document.createElement(tagName);

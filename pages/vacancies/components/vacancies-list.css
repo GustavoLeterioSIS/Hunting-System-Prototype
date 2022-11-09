@@ -49,14 +49,13 @@
     box-shadow: 0 3px 5px -2px var(--hover-color);
 }
 
-.vacancies-list .vacancies-header button {
+.vacancies-list .vacancies-header div {
     margin: 0;
     padding: 0;
     background-color: transparent;
     border: none;
     cursor: pointer;
-    width: clamp(.7rem, 1.5vw, 1.2rem);
-    width: 10%;
+    width: clamp(1rem, 1.5vw, 1.5rem);
 }
 
 .vacancies-list .vacancies-header button img {
@@ -71,8 +70,9 @@
 }
 
 .vacancies-list .vacancies-header .checkbox-label {
-    font-size: clamp(.9rem, 1.2vw, 1.2rem);
+    font-size: clamp(.5rem, 1.3vw, 1.2rem);
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 5%;
     padding: 0 1rem;
@@ -80,7 +80,7 @@
 }
 
 .vacancies-list .vacancies-header .results {
-    font-size: clamp(.7rem, 2vw, 1rem);
+    font-size: clamp(.7rem, 1vw, 1rem);
     color: var(--light-gray);
     white-space: nowrap;
 }

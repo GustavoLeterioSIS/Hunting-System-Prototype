@@ -77,7 +77,7 @@ const handleStatus = (elements, status) => {
 }
 
 const genExtendedCard = (card, vacancy) => {
-    const extendedInfo = genTag("div", ["extended__info", "hidden"]);
+    const extendedInfo = genTag("div", "extended__info");
     card.appendChild(extendedInfo);
 
     const links = genTag("div", "links");

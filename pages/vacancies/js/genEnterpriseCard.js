@@ -1,12 +1,14 @@
 const enterpriseItems = document.getElementById("enterpriseItems");
 
 const appendEntCard = (enterprise) => {
-    const entCard = enterpriseItems.appendChild(genEnterprise(enterprise));
+    const entCard = enterpriseItems.appendChild(genEnterprise(enterprise))
     entCard.addEventListener("click", e => {
         e.stopPropagation();
-        localStorage.setItem('enterprise', entCard.querySelector(".enterprise__name").innerText);
+        const enterpriseName = entCard.querySelector(".enterprise__name").innerText;
+        localStorage.setItem('enterprise', enterpriseName);
         reloadVacancies();
         resetCheckboxes();
+        vacInput.setAttribute("placeholder", `Vagas ${enterprise.name}`);
     });
 }
 
@@ -89,8 +91,11 @@ const genVacInfo = (status, enterprise) => {
         enterprise.vacancies.filter(vacancy => {
             if (vacancy.status == status) return vacancy;
         }).length);
+        
     vacInfoButton.addEventListener("click", e => {
         e.stopPropagation();
+        const enterpriseName = vacInfoButton.parentNode.parentNode.parentNode.querySelector(".enterprise__name").innerText;
+        localStorage.setItem('enterprise', enterpriseName);
         reloadVacancies();
         resetCheckboxes();
         checkboxes[status].checked = true;

@@ -46,14 +46,13 @@
     box-shadow: 0 3px 5px -2px var(--hover-color);
 }
 
-.enterprise-list .enterprise-header button {
+.enterprise-list .enterprise-header div {
     margin: 0;
     padding: 0;
     background-color: transparent;
     border: none;
     cursor: pointer;
-    width: clamp(.7rem, 1.5vw, 1.2rem);
-    width: 10%;
+    width: clamp(1rem, 1.5vw, 1.5rem);
 }
 
 .enterprise-list .enterprise-header button svg {
@@ -69,7 +68,7 @@
 }
 
 .enterprise-list .enterprise-header .results {
-    font-size: clamp(.7rem, 2vw, 1rem);
+    font-size: clamp(.7rem, 1vw, 1rem);
     color: var(--light-gray);
     white-space: nowrap;
 }

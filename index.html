@@ -52,9 +52,10 @@
                         </svg>
                     </div>
                     <ul class="dropdown__menu" id="sbDropdownContent">
-                        <li><a href="./pages/vacancies/vacancies.html" target="main">Recém Chegados</a></li>
-                        <li><a href="./pages/vacancies/vacancies.html" target="main">Em Progresso</a></li>
-                        <li><a href="./pages/vacancies/vacancies.html" target="main">Finalizados</a></li>
+                        <li><a href="./pages/vacancies/vacancies.html" target="main">Todas as Vagas</a></li>
+                        <li><a href="./pages/vacancies/vacancies.html" target="main" onclick="localStorage.setItem('checkbox','done')">Em Aberto</a></li>
+                        <li><a href="./pages/vacancies/vacancies.html" target="main" onclick="localStorage.setItem('checkbox','inprogress')"">Em Progresso</a></li>
+                        <li><a href="./pages/vacancies/vacancies.html" target="main" onclick="localStorage.setItem('checkbox','undone')">Finalizados</a></li>
                     </ul>
                 </li>
                 <li><a href="#" target="main">Empresas</a></li>
