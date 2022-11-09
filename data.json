@@ -13,23 +13,23 @@
             "updates": [
               {
                 "user": "Gustavo Letério",
+                "date": "2022-10-09T14:58:34.000Z",
+                "description": "Vaga Aberta"
+              },
+              {
+                "user": "Gustavo Letério",
                 "date": "2022-09-09T14:58:34.000Z",
-                "description": "start date"
+                "description": "Tarefa Aceita"
               },
               {
                 "user": "Gustavo Letério",
-                "date": "2022-09-21T12:56:04.000Z",
-                "description": "accept task"
+                "date": "2022-09-09T14:58:34.000Z",
+                "description": "Entrevistas Finalizadas"
               },
               {
                 "user": "Gustavo Letério",
-                "date": "2022-09-21T12:56:04.000Z",
-                "description": "finished interviews"
-              },
-              {
-                "user": "Gustavo Letério",
-                "date": "10/05/2022 10:36:44",
-                "description": "contract made"
+                "date": "2022-09-09T14:58:34.000Z",
+                "description": "Contrato Efetuado"
               }
             ]
           },
@@ -43,7 +43,7 @@
               {
                 "user": "Gustavo Letério",
                 "date": "2022-09-09T14:58:34.000Z",
-                "description": "start date"
+                "description": "Vaga Aberta"
               }
             ]
           },
@@ -57,12 +57,12 @@
               {
                 "user": "Gustavo Letério",
                 "date": "2022-09-09T14:58:34.000Z",
-                "description": "start date"
+                "description": "Vaga Aberta"
               },
               {
                 "user": "Gustavo Letério",
                 "date": "2022-09-21T12:56:04.000Z",
-                "description": "accept task"
+                "description": "Tarefa Aceita"
               }
             ]
           }
@@ -82,22 +82,22 @@
               {
                 "user": "Gustavo Letério",
                 "date": "2022-09-09T14:58:34.000Z",
-                "description": "start date"
+                "description": "Vaga Aberta"
               },
               {
                 "user": "Gustavo Letério",
                 "date": "2022-09-21T12:56:04.000Z",
-                "description": "accept task"
+                "description": "Tarefa Aceita"
               },
               {
                 "user": "Gustavo Letério",
                 "date": "2022-09-21T12:56:04.000Z",
-                "description": "finished interviews"
+                "description": "Entrevistas Finalizadas"
               },
               {
                 "user": "Gustavo Letério",
-                "date": "10/05/2022 10:36:44",
-                "description": "contract made"
+                "date": "2022-09-21T12:56:04.000Z",
+                "description": "Contrato Efetuado"
               }
             ]
           },
@@ -111,7 +111,7 @@
               {
                 "user": "Gustavo Letério",
                 "date": "2022-09-09T14:58:34.000Z",
-                "description": "start date"
+                "description": "Vaga Aberta"
               }
             ]
           },
@@ -125,12 +125,12 @@
               {
                 "user": "Gustavo Letério",
                 "date": "2022-09-09T14:58:34.000Z",
-                "description": "start date"
+                "description": "Vaga Aberta"
               },
               {
                 "user": "Gustavo Letério",
                 "date": "2022-09-21T12:56:04.000Z",
-                "description": "accept task"
+                "description": "Tarefa Aceita"
               }
             ]
           }

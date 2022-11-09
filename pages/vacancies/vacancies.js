@@ -92,9 +92,10 @@ const appendEntCard = (enterprise) => {
 const appendVacCard = (entName, vacancy) => {
     const vacCard = vacancyItems.appendChild(genVacancy(entName, vacancy));
     vacCard.addEventListener("click", () => {
-        // const vacExt = vacCard.parentNode.querySelector(".extended__info");
+        console.log(vacCard)
+        const vacExt = vacCard.querySelector(".extended__info");
         const dropIcon = vacCard.querySelector(".dropdown__icon");
-        // vacExt.classList.toggle("open");
+        vacExt.classList.toggle("open");
         dropIcon.classList.toggle("open");
     });
 }

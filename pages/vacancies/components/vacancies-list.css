@@ -50,9 +50,10 @@
 }
 
 .vacancies-list .vacancies-header button {
+    margin: 0;
+    padding: 0;
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid var(--light-gray);
     cursor: pointer;
     width: clamp(.7rem, 1.5vw, 1.2rem);
     width: 10%;

@@ -57,7 +57,7 @@
 }
 
 .enterprise-list .enterprise-header button svg {
-    width: clamp(.8rem, 1.5vw, 1.3rem);
+    width: clamp(.7rem, 1.5vw, 1.2rem);
 }
 
 .enterprise-list .enterprise-header button svg path {

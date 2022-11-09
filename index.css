@@ -5,25 +5,15 @@
 @import url("/components/hambuguer-button.css");
 
 
-body{
+body {
     overflow: hidden;
 }
 
 main {
     display: flex;
-    height:85vh;
+    height: 87vh;
 }
 
 iframe {
     width: 100%;
 }
-
-
-
-
-
-
-
-
-
-

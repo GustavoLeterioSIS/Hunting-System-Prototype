@@ -43,8 +43,36 @@ const genVacancy = (entName, vacancy) => {
     dropdownIcon.setAttribute("alt", "Dropdown SVG Icon");
     mainInfo.appendChild(dropdownIcon);
 
+    const extendedInfo = document.createElement("div");
+    extendedInfo.classList.add("extended__info");
+    extendedInfo.classList.add("hidden");
+    card.appendChild(extendedInfo);
+
+    const links = document.createElement("div");
+    links.classList.add("links");
+    extendedInfo.appendChild(links);
 
 
+    const listCandidates = document.createElement("a");
+    listCandidates.classList.add("link");
+    listCandidates.setAttribute("href", "");
+    listCandidates.innerText = "↗ Lista de Candidatos"
+    links.appendChild(listCandidates);
+
+    const histAtt = document.createElement("a");
+    histAtt.classList.add("link");
+    histAtt.setAttribute("href", "");
+    histAtt.innerText = "↗ Histórico de Atualizações"
+    links.appendChild(histAtt);
+
+    const dates = document.createElement("ul");
+    dates.classList.add("dates");
+    extendedInfo.appendChild(dates);
+
+    dates.appendChild(createEventDescription("Data de Início", vacancy.updates[0].date, vacancy.updates[0].description));
+    dates.appendChild(createEventDescription("Última Atualização", vacancy.updates[vacancy.updates.length - 1].date, vacancy.updates[vacancy.updates.length - 1].description));
+    if (vacancy.status == "done")
+        dates.appendChild(createEventDescription("Data de Início", vacancy.updates[vacancy.updates.length - 1].date, vacancy.updates[vacancy.updates.length - 1].description));
 
     handleStatus([vacStatus, infoLine], vacancy.status);
 
@@ -72,6 +100,42 @@ const handleStatus = (elements, status) => {
     }
 }
 
+const createEventDescription = (titleText, dateText, descText) => {
+    const li = document.createElement("li");
+
+    const dateWrapper = document.createElement("div");
+    dateWrapper.classList.add("date-wrapper");
+    li.appendChild(dateWrapper);
+
+    const title = document.createElement("span");
+    title.classList.add("title");
+    title.innerText = `${titleText}`;
+    dateWrapper.appendChild(title);
+
+    const date = document.createElement("span");
+    date.classList.add("date");
+    date.innerText = getDate(dateText);
+    dateWrapper.appendChild(date);
+
+    const descriptionWrapper = document.createElement("div");
+    descriptionWrapper.classList.add("description");
+    li.appendChild(descriptionWrapper);
+
+    const description = document.createElement("span");
+    description.innerText = `${descText}`;
+    descriptionWrapper.appendChild(description);
+
+    return li;
+}
+
+const getDate = (string) => {
+    const date = {
+        day: string.split("T")[0].split("-")[2],
+        month: string.split("T")[0].split("-")[1],
+        year: string.split("T")[0].split("-")[0]
+    }
+    return `${date.day}/${date.month}/${date.year}`;
+}
 /* 
 <div class="vacancy">
     <div class="main__info">

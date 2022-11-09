@@ -18,17 +18,16 @@ const hdLinks = Object.values(hdDropdownContent.getElementsByTagName("a"));
 const iframe = document.getElementById("iframe");
 
 hdLinks.forEach(link => {
-    link.addEventListener("click", () => {
+  link.addEventListener("click", () => {
     hdDropdownContent.classList.remove("displayed");
   });
 });
 
 sbLinks.forEach((link, i) => {
-  if (i > 0)
-    link.addEventListener("click", () => {
-      closeSidebarDropdown();
-      closeSidebar();
-    });
+  link.addEventListener("click", () => {
+    closeSidebarDropdown();
+    closeSidebar();
+  });
 });
 
 //Global Event
