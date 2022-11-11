@@ -2,10 +2,10 @@
     "enterprises": [
       {
         "name": "Lojas Riachuelo",
-        "logo": "/src/images/enterprises/logo/riachuelo.webp",
+        "logo": "https://res.cloudinary.com/drdaruivr/image/upload/c_scale,w_160/v1668170977/src-huntingsis/images/logo/enterprises/riachuelo-logo.webp",
         "vacancies": [
           {
-            "name": "Product Owner",
+            "name": "Scrum Master",
             "status": "inprogress",
             "statusDescription": "Período de Entrevistas",
             "taskOwner": "Gustavo Letério",
@@ -24,7 +24,7 @@
             ]
           },
           {
-            "name": "Javascript Developer",
+            "name": "React Developer",
             "status": "undone",
             "statusDescription": "Esperando Iniciar",
             "taskOwner": null,
@@ -32,7 +32,21 @@
             "updates": [
               {
                 "user": "Gustavo Letério",
-                "date": "2022-09-09T14:58:34.000Z",
+                "date": "2022-09-15T14:58:34.000Z",
+                "description": "Vaga Aberta"
+              }
+            ]
+          },
+          {
+            "name": "Ruby Developer",
+            "status": "undone",
+            "statusDescription": "Esperando Iniciar",
+            "taskOwner": null,
+            "hired": null,
+            "updates": [
+              {
+                "user": "Gustavo Letério",
+                "date": "2022-09-01T14:58:34.000Z",
                 "description": "Vaga Aberta"
               }
             ]
@@ -46,7 +60,7 @@
             "updates": [
               {
                 "user": "Gustavo Letério",
-                "date": "2022-10-09T14:58:34.000Z",
+                "date": "2022-09-05T14:58:34.000Z",
                 "description": "Vaga Aberta"
               },
               {
@@ -94,16 +108,17 @@
               },
               {
                 "user": "Gustavo Letério",
-                "date": "2022-09-21T12:56:04.000Z",
+                "date": "2022-09-12T12:56:04.000Z",
                 "description": "Tarefa Aceita"
               }
             ]
           }
         ]
       },
+      
       {
         "name": "Banco Bradesco",
-        "logo": "/src/images/enterprises/logo/bradesco.webp",
+        "logo": "https://res.cloudinary.com/drdaruivr/image/upload/c_scale,w_160/v1668170977/src-huntingsis/images/logo/enterprises/bradesco-logo.webp",
         "vacancies": [
           {
             "name": "Java Developer",

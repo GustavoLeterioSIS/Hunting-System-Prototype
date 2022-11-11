@@ -1,6 +1,7 @@
 const reloadEnterprises = () => {
     fetch("/data.json").then(res => res.json()).then(data => {
-        data.enterprises.forEach(enterprise => {
+        const sortedEnterprises = data.enterprises.sort((a, b) => (a.name < b.name ? -1 : 1));
+        sortedEnterprises.forEach(enterprise => {
             appendEntCard(enterprise);
         });
         showSearchResult("enterprise");
@@ -9,13 +10,41 @@ const reloadEnterprises = () => {
 
 const reloadVacancies = () => {
     fetch("/data.json").then(res => res.json()).then(data => {
-        const enterprise = data.enterprises.filter(enterprise => enterprise.name == localStorage.getItem("enterprise"))[0];
-        //Sort Vacancies
-        enterprise.vacancies.sort((a, b) => (a.status > b.status ? -1 : 1));
+        var enterprise = data.enterprises.filter(enterprise => enterprise.name == localStorage.getItem("enterprise"))[0];
+
+        const sortVacancies = () => {
+            const doneVacancies = [];
+            const inprogressVacancies = [];
+            const undoneVacancies = [];
+
+            //Dividing by status
+            enterprise.vacancies.forEach(vacancy => {
+                if (vacancy.status == "done") doneVacancies.push(vacancy);
+                if (vacancy.status == "inprogress") inprogressVacancies.push(vacancy);
+                if (vacancy.status == "undone") undoneVacancies.push(vacancy);
+            });
+
+
+            //Sorting by Date            
+            doneVacancies.sort((a, b) => {
+                return new Date(a.updates[a.updates.length - 1].date) -new Date(b.updates[b.updates.length - 1].date);
+            })
+
+            inprogressVacancies.sort((a, b) => {
+                return new Date(a.updates[a.updates.length - 1].date) - new Date(b.updates[b.updates.length - 1].date);
+            });
+
+            undoneVacancies.sort((a, b) => {
+                return new Date(a.updates[0].date) - new Date(b.updates[0].date);
+            });
+
+            return [...undoneVacancies, ...inprogressVacancies, ...doneVacancies];
+        }
 
         clearVacancyItems();
 
-        enterprise.vacancies.forEach(vacancy => {
+        sortVacancies().forEach(vacancy => {
+            //Function to generate by checkbox
             const appendVacByFilter = (filter) => {
                 if (checkboxes[filter].checked && vacancy.status == filter) {
                     appendVacCard(enterprise.name, vacancy);
@@ -26,12 +55,13 @@ const reloadVacancies = () => {
                 if (!checkboxes.done.checked && !checkboxes.inprogress.checked && !checkboxes.undone.checked) {
                     appendVacCard(enterprise.name, vacancy);
                 } else {
+                    //Clause to generate by checkbox
                     appendVacByFilter("done");
                     appendVacByFilter("inprogress");
                     appendVacByFilter("undone");
                 }
             }
-            
+
             inputFilter(vacInput, "vacancy");
             showSearchResult("vacancy");
         });

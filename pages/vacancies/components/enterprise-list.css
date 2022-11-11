@@ -76,7 +76,7 @@
 .enterprise-list .enterprises {
     overflow-y: scroll;
     /* Don't Remove this Padding. It's Important to not crop the bottom, because of the overflow-y. */
-    padding-bottom:2px;
+    padding-bottom: 2px;
     flex-flow: column nowrap;
     display: flex;
     gap: .5%;
