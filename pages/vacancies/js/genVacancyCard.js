@@ -43,7 +43,7 @@ const genClosedCard = (entName, vacancy) => {
 
     const dropdownIcon = genTag("img", "dropdown__icon", [{
         name: "src",
-        content: "/src/images/dropdownIcon.svg"
+        content: "/src/dropdownIcon.svg"
     }, {
         name: "alt",
         content: "Dropdown SVG Icon"
